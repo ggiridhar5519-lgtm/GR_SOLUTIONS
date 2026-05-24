@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GR Solutions</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,52 +13,55 @@
 
 <body>
 
-  <!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
 
-  <header class="navbar">
+<header class="navbar">
+
     <div class="logo">
-      GR <span>Solutions</span>
+        GR<span>Solutions</span>
     </div>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
     </nav>
 
-    <button class="nav-btn">Get Started</button>
-  </header>
+    <button class="nav-btn">
+        Get Started
+    </button>
 
-<!-- ================= PREMIUM HERO SECTION ================= -->
+</header>
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-    <div class="gradient-circle one"></div>
-    <div class="gradient-circle two"></div>
-    <div class="gradient-circle three"></div>
+    <div class="bg-circle one"></div>
+    <div class="bg-circle two"></div>
+    <div class="bg-circle three"></div>
 
-    <div class="hero-content">
+    <div class="hero-left">
 
-        <div class="premium-badge">
+        <div class="tag">
             🚀 NEXT GENERATION DIGITAL SOLUTIONS
         </div>
 
         <h1>
-            Transforming Businesses With
-            <span>Modern Technology</span>
+            Premium Digital
+            <span>Experiences</span>
         </h1>
 
         <p>
-            We create ultra-premium websites, DevOps infrastructure,
-            cloud automation, scalable platforms, and enterprise digital systems
-            engineered for modern businesses.
+            We build ultra premium websites, DevOps infrastructures,
+            cloud systems, SAP integrations and scalable business platforms.
         </p>
 
         <div class="hero-buttons">
 
             <button class="primary-btn">
-                Start Your Project
+                Start Project
             </button>
 
             <button class="secondary-btn">
@@ -67,150 +70,139 @@
 
         </div>
 
-        <div class="hero-stats">
-
-            <div class="stat-card">
-                <h2>50+</h2>
-                <p>Projects</p>
-            </div>
-
-            <div class="stat-card">
-                <h2>99%</h2>
-                <p>Client Satisfaction</p>
-            </div>
-
-            <div class="stat-card">
-                <h2>24/7</h2>
-                <p>Support</p>
-            </div>
-
-        </div>
-
     </div>
 
-    <!-- RIGHT PREMIUM VISUAL -->
+    <div class="hero-right">
 
-    <div class="hero-visual">
-
-        <div class="floating-card card-top">
-            <div class="icon">☁️</div>
-            <h3>Cloud Infrastructure</h3>
-            <p>AWS • Azure • DevOps</p>
+        <div class="floating-card top-card">
+            ☁️ Cloud Infrastructure
         </div>
 
-        <div class="floating-card card-middle">
-            <div class="icon">⚡</div>
-            <h3>Automation</h3>
-            <p>CI/CD • Jenkins • Docker</p>
-        </div>
-
-        <div class="main-dashboard">
+        <div class="dashboard">
 
             <div class="dashboard-top">
-
-                <div class="dot red"></div>
-                <div class="dot yellow"></div>
-                <div class="dot green"></div>
-
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
             </div>
 
-            <div class="dashboard-content">
+            <div class="dashboard-grid">
 
-                <div class="dashboard-box blue">
-                    <h4>Web Development</h4>
+                <div class="dash-card blue">
+                    Web Development
                 </div>
 
-                <div class="dashboard-box purple">
-                    <h4>DevOps Engineering</h4>
+                <div class="dash-card purple">
+                    DevOps
                 </div>
 
-                <div class="dashboard-box cyan">
-                    <h4>Cloud Solutions</h4>
+                <div class="dash-card cyan">
+                    Cloud Hosting
                 </div>
 
-                <div class="dashboard-box dark">
-                    <h4>SAP CPI Integration</h4>
+                <div class="dash-card dark">
+                    SAP CPI
                 </div>
 
             </div>
 
         </div>
 
+        <div class="floating-card bottom-card">
+            ⚡ CI/CD Automation
+        </div>
+
     </div>
 
 </section>
 
-<!-- ================= SERVICES SECTION ================= -->
+<!-- ================= OVAL SERVICES ================= -->
 
-<section class="services">
+<section class="oval-section">
 
-    <div class="section-header">
+    <div class="oval-card">
+        <h2>Website Development</h2>
+    </div>
 
-        <span>OUR SERVICES</span>
+    <div class="oval-card">
+        <h2>DevOps Solutions</h2>
+    </div>
 
-        <h2>
-            Premium Digital Services
-        </h2>
+    <div class="oval-card">
+        <h2>Cloud Services</h2>
+    </div>
+
+    <div class="oval-card">
+        <h2>SAP CPI Integration</h2>
+    </div>
+
+</section>
+
+<!-- ================= INFO GRID ================= -->
+
+<section class="info-grid">
+
+    <div class="info-card large">
+        <h2>Modern UI Design</h2>
 
         <p>
-            Enterprise-grade solutions designed for modern startups,
-            businesses, and scalable infrastructures.
+            Beautiful responsive websites with modern user experiences,
+            animations and enterprise-grade performance.
         </p>
-
     </div>
 
-    <div class="services-grid">
+    <div class="info-card">
+        <h2>Automation</h2>
 
-        <div class="service-card">
-            <div class="service-icon">🌐</div>
-            <h3>Website Development</h3>
-            <p>
-                Premium responsive business websites with modern UI/UX.
-            </p>
-        </div>
+        <p>
+            Complete CI/CD automation pipelines using modern DevOps tools.
+        </p>
+    </div>
 
-        <div class="service-card">
-            <div class="service-icon">⚙️</div>
-            <h3>DevOps Solutions</h3>
-            <p>
-                Complete CI/CD automation and infrastructure optimization.
-            </p>
-        </div>
+    <div class="info-card">
+        <h2>Cloud Infrastructure</h2>
 
-        <div class="service-card">
-            <div class="service-icon">☁️</div>
-            <h3>Cloud Hosting</h3>
-            <p>
-                Scalable cloud deployment and enterprise hosting services.
-            </p>
-        </div>
+        <p>
+            AWS, Azure and scalable hosting solutions for businesses.
+        </p>
+    </div>
 
-        <div class="service-card">
-            <div class="service-icon">🛒</div>
-            <h3>E-Commerce</h3>
-            <p>
-                High-performance online stores with secure payment systems.
-            </p>
-        </div>
+    <div class="info-card large">
+        <h2>24/7 Maintenance</h2>
 
-        <div class="service-card">
-            <div class="service-icon">🔗</div>
-            <h3>SAP CPI</h3>
-            <p>
-                Enterprise-grade integration and automation workflows.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-icon">🔒</div>
-            <h3>Maintenance</h3>
-            <p>
-                24/7 monitoring, support, and performance optimization.
-            </p>
-        </div>
-
+        <p>
+            Monitoring, support and optimization for enterprise systems.
+        </p>
     </div>
 
 </section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        GR<span>Solutions</span>
+    </div>
+
+    <p>
+        Building premium digital experiences for modern businesses.
+    </p>
+
+    <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 GR Solutions. All rights reserved.
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
