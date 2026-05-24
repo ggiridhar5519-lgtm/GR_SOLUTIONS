@@ -5,22 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GR Solutions</title>
 
+  <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- ICONS -->
+  <script src="https://kit.fontawesome.com/4f48f96f4d.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
 <!-- ================= BACKGROUND ================= -->
 
-<div class="bg-image"></div>
-<div class="overlay"></div>
+<div class="background-image"></div>
+<div class="background-overlay"></div>
 
-<div class="glow glow1"></div>
-<div class="glow glow2"></div>
-<div class="glow glow3"></div>
+<div class="gradient gradient1"></div>
+<div class="gradient gradient2"></div>
+<div class="gradient gradient3"></div>
 
 <!-- ================= NAVBAR ================= -->
 
@@ -31,13 +37,16 @@
     </div>
 
     <nav class="nav-links">
+
         <a href="#">Home</a>
         <a href="#">Services</a>
         <a href="#">Projects</a>
+        <a href="#">About</a>
         <a href="#">Contact</a>
+
     </nav>
 
-    <button class="nav-btn">
+    <button class="nav-button">
         Start Project
     </button>
 
@@ -45,25 +54,28 @@
 
 <!-- ================= HERO ================= -->
 
-<section class="hero">
+<section class="hero-section">
+
+    <!-- LEFT -->
 
     <div class="hero-left">
 
-        <div class="tag">
-            ⚡ NEXT LEVEL DIGITAL AGENCY
+        <div class="hero-tag">
+            🚀 NEXT GENERATION DIGITAL EXPERIENCE
         </div>
 
         <h1>
             Building
             <span>Luxury</span>
             Digital
-            Experiences
+            Systems
         </h1>
 
         <p>
-            Premium business websites, DevOps infrastructure,
-            cloud automation, SAP integrations and ultra-modern
-            enterprise platforms engineered for future businesses.
+            We engineer premium business websites,
+            DevOps infrastructures, cloud ecosystems,
+            SAP integrations and futuristic enterprise
+            experiences for modern brands.
         </p>
 
         <div class="hero-buttons">
@@ -73,24 +85,26 @@
             </button>
 
             <button class="secondary-btn">
-                View Services
+                Explore Services
             </button>
 
         </div>
 
-        <div class="hero-stats">
+        <!-- STATS -->
 
-            <div class="stat-card">
+        <div class="stats-container">
+
+            <div class="stat-box">
                 <h2>120+</h2>
                 <span>Projects</span>
             </div>
 
-            <div class="stat-card">
+            <div class="stat-box">
                 <h2>99%</h2>
-                <span>Satisfaction</span>
+                <span>Success</span>
             </div>
 
-            <div class="stat-card">
+            <div class="stat-box">
                 <h2>24/7</h2>
                 <span>Support</span>
             </div>
@@ -103,33 +117,44 @@
 
     <div class="hero-right">
 
-        <div class="floating-box top-box">
-            ☁️ Cloud Architecture
+        <!-- FLOATING -->
+
+        <div class="floating-card top-float">
+            <i class="fa-solid fa-cloud"></i>
+            Cloud Architecture
         </div>
 
-        <div class="main-ui">
+        <!-- MAIN PANEL -->
 
-            <div class="ui-top">
+        <div class="glass-panel">
+
+            <div class="panel-top">
+
                 <div class="dot red"></div>
                 <div class="dot yellow"></div>
                 <div class="dot green"></div>
+
             </div>
 
-            <div class="ui-grid">
+            <div class="panel-grid">
 
-                <div class="ui-card blue">
+                <div class="panel-card blue">
+                    <i class="fa-solid fa-code"></i>
                     <h3>Web Apps</h3>
                 </div>
 
-                <div class="ui-card purple">
+                <div class="panel-card purple">
+                    <i class="fa-solid fa-gears"></i>
                     <h3>DevOps</h3>
                 </div>
 
-                <div class="ui-card cyan">
+                <div class="panel-card cyan">
+                    <i class="fa-solid fa-cloud"></i>
                     <h3>Cloud</h3>
                 </div>
 
-                <div class="ui-card dark">
+                <div class="panel-card dark">
+                    <i class="fa-solid fa-link"></i>
                     <h3>SAP CPI</h3>
                 </div>
 
@@ -137,85 +162,118 @@
 
         </div>
 
-        <div class="floating-box bottom-box">
-            ⚡ CI/CD Automation
+        <div class="floating-card bottom-float">
+            <i class="fa-solid fa-bolt"></i>
+            CI/CD Automation
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= OVAL CARDS ================= -->
+<!-- ================= SERVICES ================= -->
 
-<section class="services">
+<section class="services-section">
 
-    <div class="service-circle">
-        <div class="inner-circle">
+    <div class="service-orb">
+
+        <div class="service-inner">
+
+            <i class="fa-solid fa-globe"></i>
+
             <h2>Website Development</h2>
+
         </div>
+
     </div>
 
-    <div class="service-circle">
-        <div class="inner-circle">
+    <div class="service-orb">
+
+        <div class="service-inner">
+
+            <i class="fa-solid fa-server"></i>
+
             <h2>DevOps Solutions</h2>
+
         </div>
+
     </div>
 
-    <div class="service-circle">
-        <div class="inner-circle">
+    <div class="service-orb">
+
+        <div class="service-inner">
+
+            <i class="fa-solid fa-cloud"></i>
+
             <h2>Cloud Hosting</h2>
+
         </div>
+
     </div>
 
-    <div class="service-circle">
-        <div class="inner-circle">
+    <div class="service-orb">
+
+        <div class="service-inner">
+
+            <i class="fa-solid fa-link"></i>
+
             <h2>SAP CPI</h2>
+
         </div>
+
     </div>
 
 </section>
 
-<!-- ================= PREMIUM GRID ================= -->
+<!-- ================= INFO GRID ================= -->
 
-<section class="premium-grid">
+<section class="info-grid">
 
-    <div class="premium-card large-card">
+    <div class="info-card large">
 
-        <h2>Modern Premium UI/UX</h2>
+        <i class="fa-solid fa-laptop-code"></i>
+
+        <h2>Luxury UI/UX</h2>
 
         <p>
-            Cinematic user interfaces with smooth animations,
-            luxury aesthetics and responsive enterprise experiences.
+            Cinematic user experiences engineered with smooth
+            animations, modern interactions and premium aesthetics.
         </p>
 
     </div>
 
-    <div class="premium-card">
+    <div class="info-card">
+
+        <i class="fa-solid fa-rocket"></i>
 
         <h2>Automation</h2>
 
         <p>
-            Complete CI/CD automation pipelines and deployment systems.
+            Enterprise CI/CD automation and scalable deployments.
         </p>
 
     </div>
 
-    <div class="premium-card">
+    <div class="info-card">
+
+        <i class="fa-solid fa-shield-halved"></i>
 
         <h2>Infrastructure</h2>
 
         <p>
-            Secure scalable cloud environments using AWS and Azure.
+            High-performance cloud systems optimized for growth.
         </p>
 
     </div>
 
-    <div class="premium-card large-card">
+    <div class="info-card large">
+
+        <i class="fa-solid fa-headset"></i>
 
         <h2>24/7 Support</h2>
 
         <p>
-            Enterprise monitoring, maintenance and optimization solutions.
+            Monitoring, maintenance and enterprise-grade optimization.
         </p>
 
     </div>
@@ -226,10 +284,12 @@
 
 <footer class="footer">
 
-    <h1>GR<span>Solutions</span></h1>
+    <div class="footer-logo">
+        GR<span>Solutions</span>
+    </div>
 
     <p>
-        Engineering premium digital experiences for modern businesses.
+        Engineering cinematic digital experiences for future businesses.
     </p>
 
     <div class="footer-links">
@@ -242,7 +302,7 @@
     </div>
 
     <div class="copyright">
-        © 2026 GR Solutions. All Rights Reserved.
+        © 2026 GR Solutions. All rights reserved.
     </div>
 
 </footer>
