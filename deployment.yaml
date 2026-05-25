@@ -1,0 +1,25 @@
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: gr-solutions
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: gr-solutions
+
+  template:
+    metadata:
+      labels:
+        app: gr-solutions
+
+    spec:
+      containers:
+      - name: gr-solutions-container
+        image: nginx
+        ports:
+        - containerPort: 80
