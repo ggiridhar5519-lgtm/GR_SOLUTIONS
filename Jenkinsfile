@@ -28,17 +28,16 @@ pipeline {
         }
 
         stage('Deploy To Kubernetes') {
-            steps {
-                bat 'kubectl apply -f deployment.yaml'
-            }
-        }
-
-        stage('Check Pods') {
-            steps {
-                bat 'kubectl get pods'
-            }
-        }
+    steps {
+        bat 'dir'
+        bat 'kubectl apply -f deployment.yaml --validate=false'
     }
+}
+       stage('Check Pods') {
+    steps {
+        bat 'kubectl get pods'
+    }
+}
 
     post {
 
