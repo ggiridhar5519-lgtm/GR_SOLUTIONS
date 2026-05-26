@@ -1,18 +1,53 @@
-
 pipeline {
+
     agent any
 
+    environment {
+        IMAGE_NAME = "ggiridhar5519/mywebsite"
+        TAG = "latest"
+    }
+
     stages {
-        stage('Clone') {
+
+        stage('Checkout Code') {
             steps {
-                echo 'GitHub Connected Successfully!'
+                echo 'Cloning Repository...'
             }
         }
 
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Portfolio Pipeline Running!'
+                bat 'docker build -t %IMAGE_NAME%:%TAG% .'
             }
+        }
+
+        stage('Docker Images') {
+            steps {
+                bat 'docker images'
+            }
+        }
+
+        stage('Deploy To Kubernetes') {
+            steps {
+                bat 'kubectl apply -f deployment.yaml'
+            }
+        }
+
+        stage('Check Pods') {
+            steps {
+                bat 'kubectl get pods'
+            }
+        }
+    }
+
+    post {
+
+        success {
+            echo 'CI/CD Pipeline Completed Successfully!'
+        }
+
+        failure {
+            echo 'Pipeline Failed!'
         }
     }
 }
