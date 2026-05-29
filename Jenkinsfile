@@ -27,6 +27,12 @@ pipeline {
             }
         }
 
+        stage('Check Kubernetes Connection') {
+            steps {
+                bat 'kubectl get nodes'
+            }
+        }
+
         stage('Deploy To Kubernetes') {
             steps {
                 bat 'dir'
