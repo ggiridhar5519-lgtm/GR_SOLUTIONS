@@ -95,11 +95,18 @@ padding:0;
 
 }
 
-/* LOGO BOX */
+.logo{
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
-
-
-
+.logo img{
+height:75px;
+width:auto;
+display:block;
+object-fit:contain;
+}
 
 /* NAV BOX */
 
@@ -190,14 +197,11 @@ margin-bottom:30px;
 }
 
 .hero-content h1{
-
-font-size:78px;
-
-line-height:1.1;
-
+font-size:58px;
+line-height:1.15;
+max-width:850px;
+margin:auto;
 margin-bottom:25px;
-
-font-weight:700;
 }
 
 .hero-content h1 span{
