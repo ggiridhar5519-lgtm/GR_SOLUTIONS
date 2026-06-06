@@ -1,24 +1,3 @@
-// NAVBAR EFFECT
-
-window.addEventListener("scroll", () => {
-
-const navbar = document.querySelector(".navbar");
-
-if(window.scrollY > 50){
-
-navbar.style.background = "rgba(0,0,0,0.85)";
-navbar.style.backdropFilter = "blur(20px)";
-navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.4)";
-
-}else{
-
-navbar.style.background = "rgba(255,255,255,0.03)";
-navbar.style.boxShadow = "none";
-
-}
-
-});
-
 
 // BACKGROUND SLIDER
 
