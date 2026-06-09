@@ -1693,12 +1693,14 @@ height:100%;
 
 display:flex;
 flex-direction:column;
-justify-content:center;
-align-items:center;
 
-padding:40px;
+justify-content:flex-start;
 
-text-align:center;
+align-items:flex-start;
+
+padding:35px;
+
+text-align:left;
 
 }
 
@@ -1720,13 +1722,13 @@ color:#d4a45f;
 
 .project-mini-site h4{
 
-font-size:34px;
+font-size:22px;
 
 font-weight:800;
 
-line-height:1.1;
+line-height:1.2;
 
-margin-bottom:15px;
+margin-bottom:12px;
 
 color:white;
 
@@ -1772,14 +1774,53 @@ margin-top:20px;
 
 .mini-products span{
 
-width:70px;
+width:90px;
+height:110px;
 
-height:70px;
-
-border-radius:16px;
+border-radius:14px;
 
 background:white;
 
-opacity:.9;
+display:block;
+
+}
+
+/* FEATURED WORK PREVIEWS V2 */
+
+.mini-navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+width:100%;
+
+margin-bottom:40px;
+
+}
+
+.mini-brand{
+
+font-size:12px;
+
+font-weight:800;
+
+color:white;
+
+letter-spacing:1px;
+
+}
+
+.mini-menu{
+
+display:flex;
+
+gap:15px;
+
+font-size:11px;
+
+color:rgba(255,255,255,.7);
 
 }
