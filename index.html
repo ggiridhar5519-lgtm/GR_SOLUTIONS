@@ -1,73 +1,170 @@
+<!-- =====================================================
+GR SOLUTIONS V2
+INDEX.HTML - PART 1
+Loader + Navbar + Mobile Menu + Hero + Trust + Services
+===================================================== -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GR Solutions | Build Your Digital Presence</title>
+<title>GR Solutions | Digital Experiences That Drive Business Growth</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- =========================
+LOADER
+========================= -->
+
+<div class="loader">
+
+    <div class="loader-logo">
+
+        <img src="logo.png" alt="GR Solutions">
+
+    </div>
+
+</div>
+
+<!-- =========================
+MESH BACKGROUND
+========================= -->
+
+<div class="mesh-bg">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+<!-- =========================
+NAVBAR
+========================= -->
 
 <header class="navbar">
 
-    <div class="logo(3)">
-        <img src="logo(3).png" alt="GR Solutions">
+    <div class="nav-container">
+
+        <a href="#" class="logo">
+
+            <img src="logo.png" alt="GR Solutions">
+
+        </a>
+
+        <nav class="desktop-nav">
+
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#work">Work</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="#contact" class="primary-btn">
+
+                Let's Build Your Website
+
+            </a>
+
+            <button class="hamburger">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
     </div>
-
-    <nav class="nav-links">
-
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-
-    </nav>
-
-    <div class="menu-btn">
-        <i class="fa-solid fa-bars"></i>
-    </div>
-
-    <a href="#contact" class="nav-btn">
-        Let's Build Your Website
-    </a>
 
 </header>
 
-<!-- HERO -->
+<!-- =========================
+MOBILE MENU
+========================= -->
+
+<div class="mobile-overlay"></div>
+
+<div class="mobile-menu">
+
+    <div class="mobile-header">
+
+        <img src="logo.png" alt="GR Solutions">
+
+        <button class="close-menu">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+    <div class="mobile-links">
+
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+    <a href="#contact" class="mobile-btn">
+
+        Let's Build Your Website
+
+    </a>
+
+</div>
+
+<!-- =========================
+HERO
+========================= -->
 
 <section class="hero" id="home">
 
-    <div class="hero-content">
+    <div class="hero-left reveal">
 
-        <span class="hero-tag">
-            PREMIUM WEBSITE DEVELOPMENT
+        <span class="hero-badge">
+
+            DIGITAL AGENCY • WEBSITE DEVELOPMENT
+
         </span>
 
         <h1>
-            Build Stunning Websites
-            That Help Businesses Grow
+
+            Digital Experiences
+            That Drive
+            Business Growth.
+
         </h1>
 
         <p>
 
-            GR Solutions creates modern websites,
-            landing pages and digital experiences
+            We design and develop modern websites,
+            e-commerce stores and digital solutions
             that help businesses build trust,
             attract customers and grow online.
 
@@ -75,29 +172,152 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         <div class="hero-buttons">
 
-            <a href="#contact" class="btn-primary">
+            <a href="#contact" class="primary-btn">
+
                 Let's Build Your Website
+
             </a>
 
-            <a href="#services" class="btn-secondary">
-                View Services
+            <a href="#work" class="secondary-btn">
+
+                View Our Work
+
             </a>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div class="stat">
+
+                <h3>50+</h3>
+
+                <span>Projects</span>
+
+            </div>
+
+            <div class="stat">
+
+                <h3>24/7</h3>
+
+                <span>Support</span>
+
+            </div>
+
+            <div class="stat">
+
+                <h3>100%</h3>
+
+                <span>Responsive</span>
+
+            </div>
 
         </div>
 
     </div>
 
-    <div class="hero-visual">
+    <div class="hero-right reveal">
 
-        <div class="laptop">
+        <!-- Floating Cards -->
 
-            <div class="laptop-screen">
+        <div class="floating-card card-1">
 
-                <div class="screen-top"></div>
+            <i class="fa-solid fa-mobile-screen"></i>
 
-                <div class="screen-card"></div>
-                <div class="screen-card"></div>
-                <div class="screen-card"></div>
+            Mobile First
+
+        </div>
+
+        <div class="floating-card card-2">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            Fast Delivery
+
+        </div>
+
+        <div class="floating-card card-3">
+
+            <i class="fa-solid fa-headset"></i>
+
+            24/7 Support
+
+        </div>
+
+        <!-- Browser -->
+
+        <div class="browser-window">
+
+            <div class="browser-top">
+
+                <div class="dots">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+            <div class="browser-content">
+
+                <div class="browser-banner">
+
+                    <h3>GR Solutions</h3>
+
+                    <p>
+                        Digital Experiences For
+                        Modern Businesses
+                    </p>
+
+                </div>
+
+                <div class="browser-grid">
+
+                    <div class="mini-card">
+
+                        Website Design
+
+                    </div>
+
+                    <div class="mini-card">
+
+                        E-Commerce
+
+                    </div>
+
+                    <div class="mini-card">
+
+                        Deployment
+
+                    </div>
+
+                    <div class="mini-card">
+
+                        Support
+
+                    </div>
+
+                </div>
+
+                <div class="browser-footer">
+
+                    <div>
+
+                        <strong>50+</strong>
+                        Projects
+
+                    </div>
+
+                    <div>
+
+                        <strong>24/7</strong>
+                        Support
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -107,53 +327,35 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 </section>
 
-<!-- ABOUT -->
+<!-- =========================
+TRUST STRIP
+========================= -->
 
-<section class="about" id="about">
+<section class="trust-strip">
 
-    <div class="section-header">
+    <div class="marquee">
 
-        <span>ABOUT US</span>
+        <div class="marquee-content">
 
-        <h2>
-            Helping Businesses Build
-            A Strong Digital Presence
-        </h2>
+            <span>Business Websites</span>
 
-    </div>
+            <span>E-Commerce Stores</span>
 
-    <div class="about-grid">
+            <span>Landing Pages</span>
 
-        <div class="about-box">
+            <span>Website Redesign</span>
 
-            <h3>
-                Modern Websites With Purpose
-            </h3>
+            <span>Cloud Deployment</span>
 
-            <p>
+            <span>Maintenance & Support</span>
 
-                We design and develop professional
-                websites that improve credibility,
-                generate leads and help businesses
-                stand out online.
+            <span>Business Websites</span>
 
-            </p>
+            <span>E-Commerce Stores</span>
 
-        </div>
+            <span>Landing Pages</span>
 
-        <div class="about-box">
-
-            <h3>
-                Built For Growth
-            </h3>
-
-            <p>
-
-                Every project is designed with
-                performance, responsiveness and
-                future scalability in mind.
-
-            </p>
+            <span>Website Redesign</span>
 
         </div>
 
@@ -161,228 +363,151 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 </section>
 
-<!-- SERVICES -->
+<!-- =========================
+SERVICES
+========================= -->
 
 <section class="services" id="services">
 
-    <div class="section-header">
+    <div class="section-title reveal">
 
-        <span>SERVICES</span>
+        <span>OUR SERVICES</span>
 
         <h2>
-            What We Can Build For You
+
+            Solutions Designed
+            To Help Businesses
+            Grow Online.
+
         </h2>
 
     </div>
 
-    <div class="services-grid">
+    <!-- SERVICE 01 -->
 
-        <div class="service-card">
+    <div class="service-row reveal">
+
+        <div class="service-visual">
+
+            <div class="service-preview">
+
+                <div class="preview-header"></div>
+
+                <div class="preview-body"></div>
+
+            </div>
+
+        </div>
+
+        <div class="service-content">
+
             <span>01</span>
-            <h3>Business Websites</h3>
+
+            <h3>
+
+                Website Development
+
+            </h3>
+
+            <p>
+
+                Professional websites built
+                with modern design principles,
+                responsive layouts and
+                business-focused user experiences.
+
+            </p>
+
         </div>
 
-        <div class="service-card">
+    </div>
+
+    <!-- SERVICE 02 -->
+
+    <div class="service-row reverse reveal">
+
+        <div class="service-visual">
+
+            <div class="service-preview">
+
+                <div class="preview-header"></div>
+
+                <div class="preview-body"></div>
+
+            </div>
+
+        </div>
+
+        <div class="service-content">
+
             <span>02</span>
-            <h3>E-Commerce Stores</h3>
+
+            <h3>
+
+                E-Commerce Solutions
+
+            </h3>
+
+            <p>
+
+                Online stores designed
+                to increase sales,
+                improve customer experience
+                and grow your business.
+
+            </p>
+
         </div>
 
-        <div class="service-card">
+    </div>
+
+    <!-- SERVICE 03 -->
+
+    <div class="service-row reveal">
+
+        <div class="service-visual">
+
+            <div class="service-preview">
+
+                <div class="preview-header"></div>
+
+                <div class="preview-body"></div>
+
+            </div>
+
+        </div>
+
+        <div class="service-content">
+
             <span>03</span>
-            <h3>Landing Pages</h3>
-        </div>
 
-        <div class="service-card">
-            <span>04</span>
-            <h3>Website Redesign</h3>
-        </div>
+            <h3>
 
-        <div class="service-card">
-            <span>05</span>
-            <h3>Deployment & Hosting</h3>
-        </div>
+                Deployment & Hosting
 
-        <div class="service-card">
-            <span>06</span>
-            <h3>Maintenance & Support</h3>
-        </div>
+            </h3>
 
-    </div>
+            <p>
 
-</section>
+                Secure deployment,
+                performance optimization
+                and reliable hosting
+                solutions for your website.
 
-<!-- PROJECTS -->
+            </p>
 
-<section class="projects" id="projects">
-
-    <div class="section-header">
-
-        <span>FEATURED WORK</span>
-
-        <h2>
-            Solutions Designed For Growth
-        </h2>
-
-    </div>
-
-    <div class="projects-grid">
-
-        <div class="project-card">
-            <h3>Corporate Website</h3>
-            <p>Modern business presence.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>E-Commerce Store</h3>
-            <p>Sell products online.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Landing Page</h3>
-            <p>Generate quality leads.</p>
         </div>
 
     </div>
 
 </section>
 
-<!-- WHY US -->
-
-<section class="why-us">
-
-    <div class="section-header light">
-
-        <span>WHY CHOOSE US</span>
-
-        <h2>
-            Focused On Quality & Results
-        </h2>
-
-    </div>
-
-    <div class="why-grid">
-
-        <div class="why-card">
-            <i class="fa-solid fa-bolt"></i>
-            <h3>Fast Delivery</h3>
-        </div>
-
-        <div class="why-card">
-            <i class="fa-solid fa-mobile-screen"></i>
-            <h3>Mobile Responsive</h3>
-        </div>
-
-        <div class="why-card">
-            <i class="fa-solid fa-palette"></i>
-            <h3>Modern Design</h3>
-        </div>
-
-        <div class="why-card">
-            <i class="fa-solid fa-headset"></i>
-            <h3>Ongoing Support</h3>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PROCESS -->
-
-<section class="process">
-
-    <div class="section-header">
-
-        <span>PROCESS</span>
-
-        <h2>
-            How We Work
-        </h2>
-
-    </div>
-
-    <div class="process-grid">
-
-        <div>Consultation</div>
-        <div>Design</div>
-        <div>Development</div>
-        <div>Deployment</div>
-        <div>Support</div>
-
-    </div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-    <div class="contact-content">
-
-        <span>CONTACT</span>
-
-        <h2>
-            Ready To Grow Your Business Online?
-        </h2>
-
-        <p>
-            Let's discuss your project.
-        </p>
-
-    </div>
-
-    <form class="contact-form">
-
-        <input type="text" placeholder="Name">
-
-        <input type="email" placeholder="Email">
-
-        <input type="text" placeholder="Business Type">
-
-        <textarea placeholder="Tell us about your project"></textarea>
-
-        <button>
-            Send Message
-        </button>
-
-    </form>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-
-    <h2>
-        Let's Build Your Website
-    </h2>
-
-    <p>
-        Professional websites designed for growth.
-    </p>
-
-    <a href="#contact">
-        Get Started
-    </a>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-    <img src="logo.png" alt="GR Solutions">
-
-    <h3>GR Solutions</h3>
-
-    <p>
-        Website Development • Deployment • Digital Solutions
-    </p>
-
-    <p>
-        © 2026 GR Solutions. All Rights Reserved.
-    </p>
-
-</footer>
-
-</body>
-</html>
+<!-- END OF PART 1 -->
+<!-- NEXT:
+FEATURED WORK
+PROCESS
+WHY US
+TECH MARQUEE
+CONTACT
+CTA
+FOOTER -->
