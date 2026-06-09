@@ -90,7 +90,7 @@ display:inline-flex;
 align-items:center;
 justify-content:center;
 
-padding:18px 30px;
+padding:14px 20px;
 
 background:var(--dark);
 
@@ -275,7 +275,7 @@ max-width:1400px;
 
 margin:auto;
 
-padding:16px 30px;
+padding:10px 20px;
 
 display:flex;
 align-items:center;
@@ -287,7 +287,7 @@ backdrop-filter:blur(25px);
 
 border:1px solid var(--border);
 
-border-radius:80px;
+border-radius:40px;
 
 box-shadow:
 0 15px 40px rgba(0,0,0,.05);
@@ -296,7 +296,7 @@ box-shadow:
 
 .logo img{
 
-height:70px;
+height:95px;
 
 }
 
