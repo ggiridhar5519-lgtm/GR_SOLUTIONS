@@ -657,7 +657,7 @@ background:#28ca42;
 
 .browser-content{
 
-padding:35px;
+padding:26px;
 
 }
 
@@ -681,7 +681,9 @@ margin-bottom:25px;
 
 .browser-banner h3{
 
-font-size:34px;
+font-size:42px;
+
+line-height:1.1;  
 
 margin-bottom:10px;
 
@@ -698,13 +700,26 @@ gap:20px;
 
 .mini-card{
 
-background:#f8fafc;
+background:white;
 
-padding:25px;
+padding:28px;
 
-border-radius:20px;
+border-radius:24px;
 
-font-weight:600;
+font-weight:700;
+
+border:1px solid rgba(17,24,39,.08);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.05);
+
+transition:.35s ease;
+
+}
+
+.mini-card:hover{
+
+transform:translateY(-8px);
 
 }
 
