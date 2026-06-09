@@ -1681,3 +1681,105 @@ transition:.3s ease;
 transform:translateY(-5px);
 
 }
+
+/* ==================================================
+   FEATURED WORK PREVIEWS V2
+   Premium Mini Website Mockups
+================================================== */
+
+.project-mini-site{
+
+height:100%;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+padding:40px;
+
+text-align:center;
+
+}
+
+.mini-topbar{
+
+font-size:14px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+margin-bottom:25px;
+
+color:#d4a45f;
+
+}
+
+.project-mini-site h4{
+
+font-size:34px;
+
+font-weight:800;
+
+line-height:1.1;
+
+margin-bottom:15px;
+
+color:white;
+
+}
+
+.project-mini-site p{
+
+font-size:15px;
+
+line-height:1.8;
+
+max-width:320px;
+
+color:rgba(255,255,255,.75);
+
+margin-bottom:25px;
+
+}
+
+.mini-btn{
+
+padding:12px 24px;
+
+background:white;
+
+color:#111827;
+
+font-weight:700;
+
+border-radius:50px;
+
+}
+
+.mini-products{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.mini-products span{
+
+width:70px;
+
+height:70px;
+
+border-radius:16px;
+
+background:white;
+
+opacity:.9;
+
+}
