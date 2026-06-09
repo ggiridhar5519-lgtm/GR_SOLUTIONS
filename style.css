@@ -297,7 +297,7 @@ box-shadow:none;
 
 .logo img{
 
-height:95px;
+height:70px;
 
 }
 
@@ -501,13 +501,13 @@ gap:80px;
 
 align-items:center;
 
-padding-top:180px;
+padding-top:120px;
 
 }
 
 .hero-left h1{
 
-font-size:86px;
+font-size:74px;
 
 line-height:1;
 
@@ -591,6 +591,8 @@ position:relative;
 
 display:flex;
 justify-content:center;
+
+margin-top:-80px;  
 
 }
 
