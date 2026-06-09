@@ -488,3 +488,18 @@ rotateX(10deg);
 overflow:hidden;
 
 }
+
+.tech-badge{
+position:absolute;
+padding:16px 22px;
+border-radius:14px;
+font-weight:700;
+color:white;
+z-index:100;
+}
+
+.azure{
+background:#0078D4;
+top:70px;
+right:40px;
+}
