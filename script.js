@@ -1,44 +1,22 @@
-
-// BACKGROUND SLIDER
-
-const slides = document.querySelectorAll(".slide");
-
-let currentSlide = 0;
-
-function changeSlide(){
-
-slides[currentSlide].classList.remove("active");
-
-currentSlide++;
-
-if(currentSlide >= slides.length){
-currentSlide = 0;
-}
-
-slides[currentSlide].classList.add("active");
-
-}
-
-setInterval(changeSlide,5000);
-
-
+// =========================
 // SCROLL REVEAL
+// =========================
 
-const revealElements = document.querySelectorAll(
-".model-card,.service-card,.feature-card,.about-text,.contact-form"
+const revealItems = document.querySelectorAll(
+'.service-card,.project-card,.about-box,.why-card,.contact,.process-grid div'
 );
 
-function reveal(){
+function revealOnScroll(){
 
-const trigger = window.innerHeight * 0.85;
+revealItems.forEach(item=>{
 
-revealElements.forEach(element => {
+const itemTop = item.getBoundingClientRect().top;
 
-const top = element.getBoundingClientRect().top;
+const triggerPoint = window.innerHeight - 100;
 
-if(top < trigger){
+if(itemTop < triggerPoint){
 
-element.classList.add("show");
+item.classList.add('show');
 
 }
 
@@ -46,19 +24,21 @@ element.classList.add("show");
 
 }
 
-window.addEventListener("scroll", reveal);
+window.addEventListener('scroll',revealOnScroll);
 
-reveal();
+revealOnScroll();
 
 
-// ACTIVE NAVIGATION
+// =========================
+// ACTIVE NAV
+// =========================
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-links a');
 
-window.addEventListener("scroll",()=>{
+window.addEventListener('scroll',()=>{
 
-let current = "";
+let current = '';
 
 sections.forEach(section=>{
 
@@ -66,7 +46,7 @@ const sectionTop = section.offsetTop - 150;
 
 if(window.scrollY >= sectionTop){
 
-current = section.getAttribute("id");
+current = section.getAttribute('id');
 
 }
 
@@ -74,14 +54,28 @@ current = section.getAttribute("id");
 
 navLinks.forEach(link=>{
 
-link.classList.remove("active");
+link.classList.remove('active');
 
-if(link.getAttribute("href") === "#" + current){
+if(link.getAttribute('href') === '#' + current){
 
-link.classList.add("active");
+link.classList.add('active');
 
 }
 
 });
+
+});
+
+
+// =========================
+// MOBILE MENU
+// =========================
+
+const menuBtn = document.querySelector('.menu-btn');
+const navMenu = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click',()=>{
+
+navMenu.classList.toggle('mobile-active');
 
 });
