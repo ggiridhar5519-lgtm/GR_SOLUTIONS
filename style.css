@@ -258,14 +258,14 @@ NAVBAR
 
 position:fixed;
 
-top:20px;
+top:12px;
 left:0;
 
 width:100%;
 
 z-index:999;
 
-padding:0 40px;
+padding:0 24px;
 
 }
 
@@ -275,22 +275,23 @@ max-width:1400px;
 
 margin:auto;
 
-padding:10px 20px;
+padding:8px 10px;
 
 display:flex;
 align-items:center;
 justify-content:space-between;
 
-background:var(--glass);
+background:rgba(255,255,255,.08);
 
-backdrop-filter:blur(25px);
+backdrop-filter:blur(16px);
 
-border:1px solid var(--border);
+-webkit-backdrop-filter:blur(16px);
 
-border-radius:40px;
+border:none;
 
-box-shadow:
-0 15px 40px rgba(0,0,0,.05);
+border-radius:18px;
+
+box-shadow:none;
 
 }
 
@@ -1460,7 +1461,7 @@ display:block;
 }
 
 .nav-container{
-padding:14px 20px;
+padding:12px 22px;
 }
 
 .hero{
