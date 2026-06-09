@@ -1565,3 +1565,119 @@ width:100%;
 
 }
 
+/* ==================================================
+   HERO BROWSER PREVIEW V2
+   Mini Agency Website Inside Browser
+================================================== */
+
+.preview-navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+margin-bottom:35px;
+
+}
+
+.preview-logo{
+
+font-size:18px;
+font-weight:800;
+
+color:#111827;
+
+}
+
+.preview-nav-links{
+
+display:flex;
+gap:20px;
+
+font-size:13px;
+font-weight:600;
+
+color:#64748b;
+
+}
+
+.preview-hero h2{
+
+font-size:42px;
+line-height:1.05;
+
+font-weight:800;
+
+margin-bottom:15px;
+
+color:#111827;
+
+}
+
+.preview-hero p{
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#64748b;
+
+margin-bottom:20px;
+
+}
+
+.preview-hero button{
+
+background:#111827;
+
+color:white;
+
+border:none;
+
+padding:12px 22px;
+
+border-radius:50px;
+
+font-weight:600;
+
+cursor:pointer;
+
+margin-bottom:25px;
+
+}
+
+.preview-services{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:12px;
+
+}
+
+.service-preview-card{
+
+background:#f8fafc;
+
+padding:18px;
+
+border-radius:16px;
+
+text-align:center;
+
+font-size:13px;
+
+font-weight:700;
+
+border:1px solid rgba(17,24,39,.06);
+
+transition:.3s ease;
+
+}
+
+.service-preview-card:hover{
+
+transform:translateY(-5px);
+
+}
