@@ -743,3 +743,289 @@ transform:translateY(0);
 }
 
 }
+
+/* =========================
+FEATURED WORK
+========================= */
+
+.featured-work{
+padding:140px 8%;
+}
+
+.project-showcase{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+
+align-items:center;
+
+margin-bottom:140px;
+}
+
+.project-showcase.reverse .project-browser{
+order:2;
+}
+
+.project-showcase.reverse .project-info{
+order:1;
+}
+
+.browser-frame{
+
+background:white;
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.08);
+
+}
+
+.browser-bar{
+
+height:70px;
+
+background:#f8fafc;
+
+border-bottom:1px solid #e5e7eb;
+
+}
+
+.browser-preview{
+
+height:450px;
+
+background:
+linear-gradient(
+135deg,
+#111827,
+#1f2937
+);
+
+}
+
+.project-info span{
+
+font-size:18px;
+
+font-weight:700;
+
+color:var(--accent);
+
+}
+
+.project-info h3{
+
+font-size:56px;
+
+line-height:1.1;
+
+margin:20px 0;
+
+}
+
+.project-info p{
+
+font-size:18px;
+
+color:var(--text);
+
+margin-bottom:30px;
+
+}
+
+.project-info ul{
+
+list-style:none;
+
+}
+
+.project-info li{
+
+margin-bottom:15px;
+
+font-weight:500;
+
+}
+
+/* =========================
+PROCESS
+========================= */
+
+.process{
+
+background:#111827;
+
+color:white;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.process .section-title h2{
+color:white;
+}
+
+.timeline{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(5,1fr);
+
+gap:25px;
+
+position:relative;
+
+margin-top:80px;
+
+}
+
+.timeline-line{
+
+position:absolute;
+
+top:40px;
+left:0;
+
+width:100%;
+height:2px;
+
+background:rgba(255,255,255,.15);
+
+}
+
+.timeline-step{
+
+position:relative;
+
+z-index:2;
+
+text-align:center;
+
+}
+
+.step-number{
+
+width:80px;
+height:80px;
+
+margin:auto auto 25px;
+
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+#C89B5E,
+#E4C79D
+);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:22px;
+font-weight:700;
+
+color:#111827;
+
+box-shadow:
+0 15px 40px rgba(200,155,94,.3);
+
+}
+
+.timeline-step h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.timeline-step p{
+
+color:#cbd5e1;
+
+font-size:15px;
+
+}
+
+/* =========================
+WHY GR SOLUTIONS
+========================= */
+
+.why-gr{
+
+padding:140px 8%;
+
+}
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:30px;
+
+margin-top:80px;
+
+}
+
+.why-box{
+
+background:rgba(255,255,255,.7);
+
+backdrop-filter:blur(20px);
+
+padding:40px;
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.5);
+
+transition:.35s ease;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.05);
+
+}
+
+.why-box:hover{
+
+transform:translateY(-10px);
+
+}
+
+.why-box i{
+
+font-size:36px;
+
+color:var(--accent);
+
+margin-bottom:25px;
+
+}
+
+.why-box h3{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+}
+
+.why-box p{
+
+color:var(--text);
+
+}
