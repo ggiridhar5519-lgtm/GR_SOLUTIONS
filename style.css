@@ -812,17 +812,16 @@ border-bottom:1px solid #e5e7eb;
 
 }
 
-.browser-preview{
+.corporate-preview{
+background:linear-gradient(135deg,#111827,#334155);
+}
 
-height:450px;
+.restaurant-preview{
+background:linear-gradient(135deg,#7c2d12,#ea580c);
+}
 
-background:
-linear-gradient(
-135deg,
-#111827,
-#1f2937
-);
-
+.ecommerce-preview{
+background:linear-gradient(135deg,#0f172a,#2563eb);
 }
 
 .project-info span{
@@ -1823,4 +1822,111 @@ font-size:11px;
 
 color:rgba(255,255,255,.7);
 
+}
+/* ==========================================
+FEATURED WORK REDESIGN
+========================================== */
+
+.corporate-preview,
+.restaurant-preview,
+.ecommerce-preview{
+padding:30px;
+height:450px;
+}
+
+.corp-nav,
+.shop-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.corp-logo{
+font-weight:800;
+color:white;
+}
+
+.corp-links{
+display:flex;
+gap:15px;
+color:rgba(255,255,255,.7);
+font-size:12px;
+}
+
+.corp-hero h3,
+.restaurant-site h3,
+.shop-site h3{
+font-size:32px;
+line-height:1.1;
+color:white;
+margin-bottom:15px;
+}
+
+.corp-hero p,
+.restaurant-site p{
+color:rgba(255,255,255,.75);
+margin-bottom:20px;
+}
+
+.corp-btn{
+display:inline-block;
+background:white;
+color:#111827;
+padding:12px 24px;
+border-radius:40px;
+font-weight:700;
+}
+
+.corp-cards{
+display:flex;
+gap:15px;
+margin-top:40px;
+}
+
+.corp-card{
+background:white;
+color:#111827;
+padding:15px;
+border-radius:16px;
+font-weight:700;
+flex:1;
+}
+
+.food-gallery{
+display:flex;
+gap:15px;
+margin-top:30px;
+}
+
+.food-item{
+height:120px;
+flex:1;
+background:white;
+border-radius:18px;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:25px;
+}
+
+.product-box{
+height:110px;
+background:white;
+border-radius:18px;
+}
+
+.corporate-preview{
+background:linear-gradient(135deg,#111827,#334155);
+}
+
+.restaurant-preview{
+background:linear-gradient(135deg,#7c2d12,#ea580c);
+}
+
+.ecommerce-preview{
+background:linear-gradient(135deg,#0f172a,#2563eb);
 }
