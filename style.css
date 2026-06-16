@@ -269,6 +269,23 @@ padding:0 24px;
 
 }
 
+.nav-container{
+
+max-width:1400px;
+margin:auto;
+padding:8px 10px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+background:#ffffff;
+
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
 
 .logo img{
 
