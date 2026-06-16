@@ -2239,3 +2239,51 @@ ABOUT
 .about-content li{
     margin-bottom:12px;
 }
+
+
+@media (max-width:768px){
+
+    .about-section{
+        grid-template-columns:1fr;
+        gap:40px;
+        text-align:center;
+        padding:80px 20px;
+    }
+
+    .about-image{
+        display:flex;
+        justify-content:center;
+    }
+
+    .about-image img{
+        width:250px;
+        max-width:100%;
+        height:auto;
+        border-radius:20px;
+    }
+
+    .about-content h2{
+        font-size:2.2rem;
+        line-height:1.2;
+    }
+
+    .about-content p{
+        font-size:1rem;
+    }
+
+    .about-content ul{
+        list-style:none;
+        padding:0;
+        margin:20px 0;
+    }
+
+    .about-content li{
+        margin-bottom:12px;
+    }
+
+    .about-content .primary-btn{
+        display:inline-flex;
+        justify-content:center;
+    }
+
+}
