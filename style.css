@@ -1360,6 +1360,10 @@ gap:12px;
 
 }
 
+.footer-toggle{
+    display:none;
+}
+
 .footer-links h4{
 
 margin-bottom:15px;
