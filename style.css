@@ -1996,3 +1996,39 @@ font-weight:700;
 text-align:center;
 color:#111827;
 }
+
+/* ========================================== */
+
+.ecommerce-badge{
+color:white;
+font-size:14px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.ecommerce-site h3{
+font-size:32px;
+color:white;
+margin-bottom:15px;
+}
+
+.ecommerce-site p{
+color:rgba(255,255,255,.8);
+margin-bottom:30px;
+}
+
+.ecommerce-cards{
+display:flex;
+gap:15px;
+margin-top:30px;
+}
+
+.ecommerce-card{
+flex:1;
+background:white;
+padding:20px;
+border-radius:16px;
+font-weight:700;
+text-align:center;
+color:#111827;
+}
