@@ -2181,3 +2181,73 @@ GLOBAL MOBILE SAFETY NET
     }
 
 }
+
+
+
+/* =========================
+ABOUT
+========================= */
+
+.about-section{
+    max-width:1200px;
+    margin:0 auto;
+    padding:120px 40px;
+
+    display:grid;
+    grid-template-columns:450px 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+    border-radius:30px;
+    display:block;
+}
+
+.about-content span{
+    color:#C89B5E;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.about-content h2{
+    font-size:4rem;
+    line-height:1.1;
+    margin:20px 0;
+}
+
+.about-content p{
+    font-size:1.2rem;
+    color:#475569;
+    margin-bottom:25px;
+}
+
+.about-content ul{
+    list-style:none;
+    padding:0;
+    margin:0 0 30px;
+}
+
+.about-content li{
+    margin-bottom:15px;
+    font-size:1.1rem;
+}
+
+.about-content li::before{
+    content:"✓ ";
+    color:#C89B5E;
+    font-weight:bold;
+}
+
+
+.about-section{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.about-image img{
+    height:400px;
+}
