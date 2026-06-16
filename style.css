@@ -2032,3 +2032,105 @@ font-weight:700;
 text-align:center;
 color:#111827;
 }
+
+
+/* ==========================================
+GLOBAL MOBILE SAFETY NET
+========================================== */
+
+@media (max-width:768px){
+
+    *{
+        max-width:100%;
+    }
+
+    body{
+        overflow-x:hidden;
+    }
+
+    img{
+        max-width:100%;
+        height:auto;
+    }
+
+    section{
+        padding:80px 20px;
+    }
+
+    /* ALL GRID LAYOUTS */
+
+    .hero,
+    .project-showcase,
+    .contact-wrapper,
+    .footer-top{
+        display:grid;
+        grid-template-columns:1fr !important;
+        gap:40px;
+    }
+
+    /* ALL FLEX ROWS */
+
+    .hero-buttons,
+    .hero-stats,
+    .corp-cards,
+    .clinic-cards,
+    .ecommerce-cards,
+    .education-cards{
+        flex-direction:column;
+    }
+
+    /* TITLES */
+
+    h1{
+        font-size:42px !important;
+        line-height:1.1;
+    }
+
+    h2{
+        font-size:34px !important;
+        line-height:1.1;
+    }
+
+    h3{
+        font-size:28px !important;
+        line-height:1.2;
+    }
+
+    /* BROWSER PREVIEWS */
+
+    .browser-window,
+    .browser-frame{
+        width:100%;
+    }
+
+    .corporate-preview,
+    .clinic-preview,
+    .ecommerce-preview,
+    .education-preview{
+        height:auto;
+        min-height:350px;
+    }
+
+    /* WHY SECTION */
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* PROCESS */
+
+    .timeline{
+        grid-template-columns:1fr;
+    }
+
+    .timeline-line{
+        display:none;
+    }
+
+    /* TECH */
+
+    .tech-track{
+        gap:20px;
+    }
+
+}
