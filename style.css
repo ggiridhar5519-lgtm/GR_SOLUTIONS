@@ -2134,3 +2134,33 @@ GLOBAL MOBILE SAFETY NET
     }
 
 }
+
+
+@media(max-width:768px){
+
+    .footer{
+        text-align:center;
+    }
+
+    .footer-brand{
+        text-align:center;
+    }
+
+    .footer-brand p{
+        margin:0 auto;
+    }
+
+    .footer-links{
+        align-items:center;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .footer-brand img{
+        margin:0 auto 20px;
+    }
+
+}
