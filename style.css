@@ -2422,3 +2422,22 @@ ABOUT
     }
 
 }
+
+.service-preview{
+    margin-top:30px;
+    height:320px;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.service-preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.service-card:hover img{
+    transform:scale(1.05);
+}
