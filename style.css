@@ -2291,3 +2291,134 @@ ABOUT
     }
 
 }
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:80px;
+}
+
+.service-card{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(20px);
+    border-radius:32px;
+    padding:35px;
+    border:1px solid rgba(255,255,255,.5);
+    box-shadow:0 20px 50px rgba(0,0,0,.06);
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-12px);
+}
+
+.service-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.service-top span{
+    font-size:15px;
+    font-weight:700;
+    color:#C89B5E;
+}
+
+.service-top i{
+    font-size:28px;
+    color:#C89B5E;
+}
+
+.service-card h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.service-card p{
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+.service-preview{
+    background:#111827;
+    border-radius:22px;
+    padding:20px;
+    min-height:220px;
+}
+
+.mockup-header{
+    height:15px;
+    width:60%;
+    background:white;
+    opacity:.3;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+.mockup-banner{
+    height:70px;
+    background:white;
+    opacity:.15;
+    border-radius:18px;
+    margin-bottom:20px;
+}
+
+.mockup-cards{
+    display:flex;
+    gap:10px;
+}
+
+.mockup-cards span{
+    flex:1;
+    height:70px;
+    background:white;
+    border-radius:15px;
+    opacity:.15;
+}
+
+.mockup-products{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.mockup-products span{
+    height:80px;
+    background:white;
+    border-radius:15px;
+    opacity:.15;
+}
+
+.hosting-chart{
+    height:90px;
+    border-radius:18px;
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #38bdf8
+    );
+    margin-bottom:20px;
+}
+
+.hosting-bars{
+    display:flex;
+    gap:12px;
+}
+
+.hosting-bars span{
+    flex:1;
+    height:50px;
+    background:white;
+    border-radius:12px;
+    opacity:.15;
+}
+
+@media(max-width:768px){
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+}
