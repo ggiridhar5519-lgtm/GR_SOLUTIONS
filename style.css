@@ -2423,3 +2423,54 @@ ABOUT
 
 }
 
+.preview-title{
+    color:white;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.preview-features{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.preview-features span{
+    background:white;
+    color:#111827;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.product-box{
+    background:white;
+    color:#111827;
+    padding:25px;
+    border-radius:16px;
+    text-align:center;
+    font-weight:700;
+}
+
+.server-status{
+    color:white;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.server-bar{
+    height:18px;
+    background:white;
+    border-radius:30px;
+    margin-bottom:15px;
+    opacity:.8;
+}
