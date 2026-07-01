@@ -2577,23 +2577,73 @@ transition:0.5s;
 
 .tech-card{
 
-position:absolute;
+    position:absolute;
 
-background:rgba(255,255,255,.85);
+    display:flex;
+    align-items:center;
+    gap:12px;
 
-backdrop-filter:blur(20px);
+    padding:18px 28px;
 
-padding:18px 28px;
+    background:rgba(255,255,255,.12);
 
-border-radius:50px;
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
-font-weight:700;
+    border:1px solid rgba(255,255,255,.18);
 
-box-shadow:
-0 15px 40px rgba(0,0,0,.12);
+    border-radius:20px;
 
-animation:floatTech 5s infinite ease-in-out;
+    color:#fff;
 
+    font-size:17px;
+    font-weight:700;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.25);
+
+    cursor:pointer;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+
+    animation:floatTech 6s ease-in-out infinite;
+
+    z-index:5;
+
+}
+
+.tech-card i{
+
+    font-size:26px;
+
+}
+
+
+.html i{
+color:#E34F26;
+}
+
+.css i{
+color:#1572B6;
+}
+
+.js i{
+color:#F7DF1E;
+}
+
+.react i{
+color:#61DAFB;
+}
+
+.docker i{
+color:#2496ED;
+}
+
+.aws i{
+color:#FF9900;
 }
 
 .html{
@@ -2643,4 +2693,16 @@ transform:translateY(0);
 }
 
 
+.tech-card:hover{
 
+    transform:
+    translateY(-15px)
+    scale(1.08)
+    rotate(3deg);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.35);
+
+    background:rgba(255,255,255,.18);
+
+}
