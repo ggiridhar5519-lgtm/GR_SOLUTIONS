@@ -2647,93 +2647,93 @@ color:#FF9900;
 }
 
 .html{
-top:15%;
-left:10%;
-}
-
-.css{
-top:65%;
-left:15%;
-}
-
-.js{
-top:25%;
-right:15%;
-}
-
-.react{
-top:55%;
-right:10%;
-}
-
-.docker{
-top:40%;
-left:45%;
-}
-
-.aws{
-top:75%;
-right:30%;
-}
-
-.angular{
-    top:10%;
-    left:42%;
-}
-
-.node{
-    top:30%;
-    right:8%;
-}
-
-.python{
-    bottom:12%;
+    top:8%;
     left:8%;
 }
 
+.angular{
+    top:4%;
+    left:42%;
+}
+
 .java{
-    top:12%;
-    right:30%;
-}
-
-.php{
-    bottom:25%;
-    left:28%;
-}
-
-.bootstrap{
-    top:48%;
-    left:20%;
-}
-
-.github{
-    bottom:8%;
-    right:10%;
-}
-
-.git{
-    top:72%;
-    left:45%;
-}
-
-.linux{
-    top:60%;
-    right:25%;
+    top:5%;
+    right:18%;
 }
 
 .wordpress{
-    top:22%;
-    left:72%;
+    top:18%;
+    right:3%;
 }
 
-.npm{
-    bottom:20%;
-    right:38%;
+.node{
+    top:33%;
+    right:1%;
+}
+
+.docker{
+    top:42%;
+    left:46%;
 }
 
 .figma{
-    top:48%;
-    right:42%;
+    top:58%;
+    left:48%;
+}
+
+.react{
+    top:60%;
+    right:2%;
+}
+
+.bootstrap{
+    top:52%;
+    left:18%;
+}
+
+.css{
+    bottom:22%;
+    left:12%;
+}
+
+.php{
+    bottom:22%;
+    left:28%;
+}
+
+.python{
+    bottom:8%;
+    left:2%;
+}
+
+.git{
+    bottom:8%;
+    left:46%;
+}
+
+.npm{
+    bottom:16%;
+    left:58%;
+}
+
+.aws{
+    bottom:10%;
+    right:22%;
+}
+
+.linux{
+    bottom:26%;
+    right:18%;
+}
+
+.github{
+    bottom:4%;
+    right:4%;
+}
+
+.js{
+    top:34%;
+    left:72%;
 }
 
 @keyframes floatTech{
