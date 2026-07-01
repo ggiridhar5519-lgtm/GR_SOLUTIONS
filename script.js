@@ -102,3 +102,34 @@ item.style.transition="0.8s ease";
 window.addEventListener("scroll",revealElements);
 
 revealElements();
+
+
+// ================================
+// TECH CARD MAGNETIC EFFECT
+// ================================
+
+const techCards = document.querySelectorAll(".tech-card");
+
+techCards.forEach(card => {
+
+    card.addEventListener("mousemove", (e) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        card.style.transform =
+            `translate(${x * 0.15}px, ${y * 0.15}px)
+             scale(1.08)
+             rotate(${x * 0.05}deg)`;
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "";
+
+    });
+
+});
