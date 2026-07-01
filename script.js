@@ -133,3 +133,18 @@ techCards.forEach(card => {
     });
 
 });
+
+
+const cards = document.querySelectorAll(".tech-card");
+
+cards.forEach(card=>{
+
+    card.style.left = Math.random()*75 + 10 + "%";
+
+    card.style.animationDuration =
+        (15 + Math.random()*15)+"s";
+
+    card.style.animationDelay =
+        -(Math.random()*25)+"s";
+
+});
