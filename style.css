@@ -2676,6 +2676,66 @@ top:75%;
 right:30%;
 }
 
+.angular{
+    top:10%;
+    left:42%;
+}
+
+.node{
+    top:30%;
+    right:8%;
+}
+
+.python{
+    bottom:12%;
+    left:8%;
+}
+
+.java{
+    top:12%;
+    right:30%;
+}
+
+.php{
+    bottom:25%;
+    left:28%;
+}
+
+.bootstrap{
+    top:48%;
+    left:20%;
+}
+
+.github{
+    bottom:8%;
+    right:10%;
+}
+
+.git{
+    top:72%;
+    left:45%;
+}
+
+.linux{
+    top:60%;
+    right:25%;
+}
+
+.wordpress{
+    top:22%;
+    left:72%;
+}
+
+.npm{
+    bottom:20%;
+    right:38%;
+}
+
+.figma{
+    top:48%;
+    right:42%;
+}
+
 @keyframes floatTech{
 
 0%{
