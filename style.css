@@ -2546,187 +2546,177 @@ ABOUT
 
 }
 
+/* ==========================================
+PREMIUM SERVICES
+========================================== */
+
+.services{
+    padding:140px 8%;
+}
+
 .services-grid{
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
-    gap:30px;
+
+    gap:35px;
+
     margin-top:80px;
+
 }
 
 .service-card{
-    background:rgba(255,255,255,.75);
-    backdrop-filter:blur(20px);
-    border-radius:32px;
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:700px;
+
     padding:35px;
-    border:1px solid rgba(255,255,255,.5);
-    box-shadow:0 20px 50px rgba(0,0,0,.06);
-    transition:.4s;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    transition:.45s ease;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.06);
+
 }
 
 .service-card:hover{
-    transform:translateY(-12px);
+
+    transform:translateY(-15px);
+
+    box-shadow:
+    0 35px 70px rgba(0,0,0,.12);
+
 }
 
-.service-top{
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+    90deg,
+    #2563eb,
+    #06b6d4,
+    #C89B5E
+    );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.45s;
+
+}
+
+.service-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.service-header{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    margin-bottom:25px;
+
+    margin-bottom:30px;
+
 }
 
-.service-top span{
-    font-size:15px;
-    font-weight:700;
-    color:#C89B5E;
+.service-number{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#f3f4f6;
+
+    font-weight:800;
+
+    color:#111827;
+
 }
 
-.service-top i{
-    font-size:28px;
-    color:#C89B5E;
+.service-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+    135deg,
+    #111827,
+    #374151
+    );
+
+    color:#fff;
+
+    font-size:30px;
+
 }
 
 .service-card h3{
+
     font-size:30px;
-    margin-bottom:15px;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
 }
 
 .service-card p{
+
     color:#64748b;
-    margin-bottom:30px;
-}
 
-.service-preview{
-    background:#111827;
-    border-radius:22px;
-    padding:20px;
-    min-height:220px;
-}
+    line-height:1.8;
 
-.mockup-header{
-    height:15px;
-    width:60%;
-    background:white;
-    opacity:.3;
-    border-radius:20px;
-    margin-bottom:15px;
-}
+    margin-bottom:35px;
 
-.mockup-banner{
-    height:70px;
-    background:white;
-    opacity:.15;
-    border-radius:18px;
-    margin-bottom:20px;
-}
-
-.mockup-cards{
-    display:flex;
-    gap:10px;
-}
-
-.mockup-cards span{
-    flex:1;
-    height:70px;
-    background:white;
-    border-radius:15px;
-    opacity:.15;
-}
-
-.mockup-products{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-}
-
-.mockup-products span{
-    height:80px;
-    background:white;
-    border-radius:15px;
-    opacity:.15;
-}
-
-.hosting-chart{
-    height:90px;
-    border-radius:18px;
-    background:linear-gradient(
-    135deg,
-    #2563eb,
-    #38bdf8
-    );
-    margin-bottom:20px;
-}
-
-.hosting-bars{
-    display:flex;
-    gap:12px;
-}
-
-.hosting-bars span{
-    flex:1;
-    height:50px;
-    background:white;
-    border-radius:12px;
-    opacity:.15;
-}
-
-@media(max-width:768px){
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-.preview-title{
-    color:white;
-    font-size:22px;
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.preview-features{
-    display:flex;
-    gap:10px;
-    margin-top:20px;
-}
-
-.preview-features span{
-    background:white;
-    color:#111827;
-    padding:8px 14px;
-    border-radius:30px;
-    font-size:12px;
-    font-weight:600;
-}
-
-.product-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.product-box{
-    background:white;
-    color:#111827;
-    padding:25px;
-    border-radius:16px;
-    text-align:center;
-    font-weight:700;
-}
-
-.server-status{
-    color:white;
-    font-size:20px;
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.server-bar{
-    height:18px;
-    background:white;
-    border-radius:30px;
-    margin-bottom:15px;
-    opacity:.8;
 }
 
 .tech-showcase{
