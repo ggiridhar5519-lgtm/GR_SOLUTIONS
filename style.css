@@ -2574,9 +2574,9 @@ PREMIUM SERVICES
 
     flex-direction:column;
 
-    justify-content:space-between;
+    gap:24px;
 
-    min-height:700px;
+    min-height:560px;
 
     padding:35px;
 
