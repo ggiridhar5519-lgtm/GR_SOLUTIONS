@@ -2887,3 +2887,240 @@ PREMIUM SERVICES
     align-items:center;
 
 }
+
+/*==================================
+PREVIEWS
+==================================*/
+
+.browser,
+.store,
+.dashboard{
+
+    width:100%;
+
+    max-width:560px;
+
+    background:#111827;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.25);
+
+}
+
+.browser-top{
+
+    height:50px;
+
+    background:#1f2937;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:0 20px;
+
+}
+
+.browser-top span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+}
+
+.browser-top span:nth-child(1){
+
+    background:#ef4444;
+
+}
+
+.browser-top span:nth-child(2){
+
+    background:#facc15;
+
+}
+
+.browser-top span:nth-child(3){
+
+    background:#22c55e;
+
+}
+
+.browser-nav{
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    color:white;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.hero{
+
+    height:180px;
+
+    margin:25px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+    );
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    padding:0 25px 30px;
+
+}
+
+.cards div{
+
+    height:90px;
+
+    background:white;
+
+    opacity:.15;
+
+    border-radius:16px;
+
+}
+
+.store-head{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:18px;
+
+    text-align:center;
+
+    font-weight:700;
+
+}
+
+.products{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    padding:25px;
+
+}
+
+.products div{
+
+    height:120px;
+
+    border-radius:18px;
+
+    background:#1e293b;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.products div:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.chart{
+
+    height:220px;
+
+    margin:25px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #0ea5e9
+    );
+
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+    padding:0 25px 30px;
+
+}
+
+.stats div{
+
+    background:#1f2937;
+
+    color:white;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    text-align:center;
+
+}
+
+.stats strong{
+
+    display:block;
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+}
