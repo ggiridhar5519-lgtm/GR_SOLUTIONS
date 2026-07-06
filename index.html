@@ -1729,5 +1729,34 @@ SCRIPT
 
 <script src="script.js"></script>
 
+
+
+    <script>
+
+const processCards = document.querySelectorAll(".process-card");
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach((entry,index)=>{
+
+        if(entry.isIntersecting){
+
+            setTimeout(()=>{
+
+                entry.target.classList.add("show");
+
+            },index*180);
+
+        }
+
+    });
+
+},{
+    threshold:.25
+});
+
+processCards.forEach(card=>observer.observe(card));
+
+</script>
 </body>
 </html>
