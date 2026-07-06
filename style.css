@@ -2926,3 +2926,23 @@ transform:translateY(0);
 
 }
 
+.thumb{
+    height:170px;
+    background:#eef5ff;
+    border-radius:18px;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.thumb img{
+    width:90%;
+    height:90%;
+    object-fit:contain;
+    transition:.4s ease;
+}
+
+.product:hover .thumb img{
+    transform:scale(1.08);
+}
