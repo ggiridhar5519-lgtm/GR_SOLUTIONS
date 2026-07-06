@@ -1295,19 +1295,27 @@ CTA
 ========================= */
 
 .premium-cta{
+    padding:180px 8%;
+    position:relative;
+    overflow:hidden;
 
-padding:160px 8%;
+    background:
+    linear-gradient(rgba(17,24,39,.78),rgba(17,24,39,.78)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1800&q=80");
 
-background:#111827;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-color:white;
+    color:#fff;
+    text-align:center;
+}
 
-position:relative;
-
-overflow:hidden;
-
-text-align:center;
-
+.cta-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:auto;
 }
 
 .cta-glow{
