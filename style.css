@@ -1118,6 +1118,52 @@ PROCESS V2
 
 }
 
+.process-card{
+
+    opacity:0;
+
+    transform:translateY(-80px) scale(.96);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+.process-card.show{
+
+    opacity:1;
+
+    transform:translateY(0) scale(1);
+
+}
+
+.process-image{
+
+    overflow:hidden;
+
+}
+
+.process-image img{
+
+    transform:translateY(-40px) scale(1.08);
+
+    opacity:0;
+
+    transition:
+    transform .9s ease,
+    opacity .9s ease;
+
+}
+
+.process-card.show .process-image img{
+
+    transform:translateY(0) scale(1);
+
+    opacity:1;
+
+}
+
 /* =========================
 WHY GR SOLUTIONS
 ========================= */
