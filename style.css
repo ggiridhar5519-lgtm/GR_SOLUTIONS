@@ -1232,6 +1232,57 @@ ICON COLORS
 
 }
 
+
+/*=========================================
+FEATURED WORK JS SUPPORT
+=========================================*/
+
+.industry-card{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+    transform-style:preserve-3d;
+
+    will-change:transform;
+
+}
+
+.industry-card.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.industry-preview{
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+}
+
+.site-hero button{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.site-hero button:hover{
+
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+
+}
+
 /*===============================
 RESPONSIVE
 ================================*/
