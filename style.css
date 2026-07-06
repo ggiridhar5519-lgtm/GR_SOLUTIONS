@@ -3089,3 +3089,42 @@ transform:translateY(0);
 }
 
 }
+
+.browser-services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    padding:25px;
+}
+
+.browser-service-card{
+    background:#f8fafc;
+    border-radius:18px;
+    padding:22px;
+    text-align:center;
+    transition:.35s;
+    border:1px solid #edf2f7;
+}
+
+.browser-service-card i{
+    font-size:28px;
+    color:#2563eb;
+    margin-bottom:14px;
+}
+
+.browser-service-card h5{
+    margin:0;
+    font-size:18px;
+    color:#111827;
+}
+
+.browser-service-card small{
+    display:block;
+    margin-top:8px;
+    color:#64748b;
+}
+
+.browser-service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(37,99,235,.15);
+}
