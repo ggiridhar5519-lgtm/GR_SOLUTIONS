@@ -2148,5 +2148,93 @@ const observer = new IntersectionObserver((entries)=>{
 processCards.forEach(card=>observer.observe(card));
 
 </script>
+
+
+    <script>
+
+/*=========================================
+FEATURED WORK ANIMATION
+=========================================*/
+
+const industryCards = document.querySelectorAll(".industry-card");
+
+const industryObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach((entry,index)=>{
+
+        if(entry.isIntersecting){
+
+            setTimeout(()=>{
+
+                entry.target.classList.add("active");
+
+            },index*180);
+
+        }
+
+    });
+
+},{
+    threshold:.20
+});
+
+industryCards.forEach(card=>industryObserver.observe(card));
+
+/*=========================================
+3D HOVER
+=========================================*/
+
+industryCards.forEach(card=>{
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const rect=card.getBoundingClientRect();
+
+        const x=e.clientX-rect.left;
+
+        const y=e.clientY-rect.top;
+
+        const rotateY=((x/rect.width)-0.5)*10;
+
+        const rotateX=((y/rect.height)-0.5)*-10;
+
+        card.style.transform=
+        `perspective(1200px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        translateY(-10px)`;
+
+    });
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.transform=
+        "perspective(1200px) rotateX(0) rotateY(0) translateY(0)";
+
+    });
+
+});
+
+/*=========================================
+BUTTON MICRO ANIMATION
+=========================================*/
+
+document.querySelectorAll(".site-hero button").forEach(btn=>{
+
+    btn.addEventListener("mouseenter",()=>{
+
+        btn.style.transform="translateY(-4px) scale(1.05)";
+
+    });
+
+    btn.addEventListener("mouseleave",()=>{
+
+        btn.style.transform="translateY(0) scale(1)";
+
+    });
+
+});
+
+</script>
 </body>
 </html>
