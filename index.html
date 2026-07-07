@@ -2251,5 +2251,71 @@ window.addEventListener("load",()=>{
 });
 
 </script>
+
+    <script>
+/*=========================================
+PREMIUM HERO CINEMATIC REVEAL
+=========================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const words = document.querySelectorAll(".hero-title .word");
+    const title = document.querySelector(".hero-title");
+    const description = document.querySelector(".hero-description");
+    const arrow = document.querySelector(".scroll-indicator");
+
+    words.forEach((word, index) => {
+
+        setTimeout(() => {
+
+            word.classList.add("show");
+
+        }, 500 + (index * 450));
+
+    });
+
+    setTimeout(() => {
+
+        title.classList.add("finish");
+
+    }, 500 + (words.length * 450) + 300);
+
+    setTimeout(() => {
+
+        description.classList.add("show");
+
+    }, 500 + (words.length * 450) + 700);
+
+    setTimeout(() => {
+
+        arrow.classList.add("show");
+
+    }, 500 + (words.length * 450) + 1200);
+
+});
+
+/*=========================================
+SMOOTH SCROLL
+=========================================*/
+
+const heroArrow = document.querySelector(".scroll-indicator");
+
+if(heroArrow){
+
+    heroArrow.addEventListener("click",(e)=>{
+
+        e.preventDefault();
+
+        document.querySelector("#services").scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+}
+</script>
+    
 </body>
 </html>
