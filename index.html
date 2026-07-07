@@ -2421,155 +2421,171 @@ if(heroArrow){
 </script>
 
 
-    <script>
+   <script>
 /*=========================================
-ABOUT SECTION ANIMATION
+ABOUT V2 ANIMATION
 =========================================*/
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",()=>{
 
-    const about = document.querySelector(".about");
+const about=document.querySelector(".about");
 
-    if(!about) return;
+if(!about) return;
 
-    const titleLines = document.querySelectorAll(".about-title span");
-    const texts = document.querySelectorAll(".about-text");
-    const cards = document.querySelectorAll(".value-card");
-    const stats = document.querySelectorAll(".about-stat h3");
-    const divider = document.querySelector(".about-divider");
+const title=document.querySelectorAll(".about-title span");
+const subtitle=document.querySelector(".about-subtitle");
+const left=document.querySelector(".about-left");
+const stats=document.querySelectorAll(".stat-card");
+const values=document.querySelectorAll(".value-card");
+const divider=document.querySelector(".about-divider");
 
-    let played = false;
+let played=false;
 
-    const observer = new IntersectionObserver((entries)=>{
+const observer=new IntersectionObserver((entries)=>{
 
-        entries.forEach(entry=>{
+entries.forEach(entry=>{
 
-            if(entry.isIntersecting && !played){
+if(entry.isIntersecting && !played){
 
-                played = true;
+played=true;
 
-                /*==================
-                TITLE
-                ==================*/
+/*=========================
+TITLE
+=========================*/
 
-                titleLines.forEach((line,index)=>{
+title.forEach((line,index)=>{
 
-                    setTimeout(()=>{
+setTimeout(()=>{
 
-                        line.classList.add("show");
+line.classList.add("show");
 
-                    },index*250);
+},index*220);
 
-                });
+});
 
-                /*==================
-                TEXT
-                ==================*/
+/*=========================
+SUBTITLE
+=========================*/
 
-                texts.forEach((text,index)=>{
+setTimeout(()=>{
 
-                    setTimeout(()=>{
+subtitle.classList.add("show");
 
-                        text.classList.add("show");
+},700);
 
-                    },900+(index*250));
+/*=========================
+LEFT CONTENT
+=========================*/
 
-                });
+setTimeout(()=>{
 
-                /*==================
-                COUNTERS
-                ==================*/
+left.classList.add("show");
 
-                setTimeout(()=>{
+},900);
 
-                    stats.forEach(counter=>{
+/*=========================
+STATS
+=========================*/
 
-                        const target = Number(counter.dataset.count);
+stats.forEach((card,index)=>{
 
-                        let value = 0;
+setTimeout(()=>{
 
-                        const speed = Math.max(15,1000/target);
+card.classList.add("show");
 
-                        const timer = setInterval(()=>{
+},1100+(index*180));
 
-                            value++;
+});
 
-                            counter.innerHTML=value;
+/*=========================
+COUNTER
+=========================*/
 
-                            if(value>=target){
+setTimeout(()=>{
 
-                                clearInterval(timer);
+document.querySelectorAll(".stat-card h3").forEach(counter=>{
 
-                                if(target===100){
+const target=parseInt(counter.dataset.count);
 
-                                    counter.innerHTML="100%";
+let current=0;
 
-                                }
+const increment=Math.max(1,Math.ceil(target/50));
 
-                                else if(target===24){
+const timer=setInterval(()=>{
 
-                                    counter.innerHTML="24/7";
+current+=increment;
 
-                                }
+if(current>=target){
 
-                                else if(target===50){
+current=target;
 
-                                    counter.innerHTML="50+";
+clearInterval(timer);
 
-                                }
+}
 
-                                else{
+if(target===100){
 
-                                    counter.innerHTML=target+"+";
+counter.innerHTML=current+"%";
 
-                                }
+}
 
-                            }
+else if(target===24){
 
-                        },speed);
+counter.innerHTML=current+"/7";
 
-                    });
+}
 
-                },1200);
+else{
 
-                /*==================
-                DIVIDER
-                ==================*/
+counter.innerHTML=current+"+";
 
-                setTimeout(()=>{
+}
 
-                    divider.classList.add("show");
+},20);
 
-                },1600);
+});
 
-                /*==================
-                VALUE CARDS
-                ==================*/
+},1200);
 
-                cards.forEach((card,index)=>{
+/*=========================
+DIVIDER
+=========================*/
 
-                    setTimeout(()=>{
+setTimeout(()=>{
 
-                        card.classList.add("show");
+divider.classList.add("show");
 
-                    },1800+(index*180));
+},1800);
 
-                });
+/*=========================
+VALUE CARDS
+=========================*/
 
-            }
+values.forEach((card,index)=>{
 
-        });
+setTimeout(()=>{
 
-    },{
+card.classList.add("show");
 
-        threshold:.35
+},2000+(index*170));
 
-    });
+});
 
-    observer.observe(about);
+observer.disconnect();
+
+}
+
+});
+
+},{
+threshold:.35
+});
+
+observer.observe(about);
 
 });
 </script>
+
     
 </body>
 </html>
