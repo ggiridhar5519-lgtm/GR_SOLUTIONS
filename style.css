@@ -588,6 +588,8 @@ CONTENT
 
     max-width:900px;
 
+    margin-top:-30px;
+
 }
 
 .hero-label{
@@ -620,7 +622,7 @@ CONTENT
 
     color:#111827;
 
-    margin-bottom:40px;
+    margin-bottom:28px;
 
 }
 
@@ -642,7 +644,7 @@ CONTENT
 
 .hero-description{
 
-    max-width:650px;
+    max-width:560px;
 
     margin:auto;
 
@@ -669,11 +671,9 @@ SCROLL BUTTON
 
     position:absolute;
 
-    bottom:45px;
+    right:70px;
 
-    left:50%;
-
-    transform:translateX(-50%);
+    bottom:60px;
 
     width:68px;
 
@@ -697,8 +697,7 @@ SCROLL BUTTON
 
     backdrop-filter:blur(20px);
 
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.08);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
 
     transition:.35s ease;
 
@@ -710,7 +709,7 @@ SCROLL BUTTON
 
 .scroll-indicator:hover{
 
-    transform:translateX(-50%) translateY(-8px);
+    transform:translateY(-8px);
 
     box-shadow:
     0 25px 60px rgba(0,0,0,.15);
@@ -785,17 +784,13 @@ ANIMATION
 
     0%,100%{
 
-        transform:
-        translateX(-50%)
-        translateY(0);
+        transform:translateY(0);
 
     }
 
     50%{
 
-        transform:
-        translateX(-50%)
-        translateY(-10px);
+        transform:translateY(-10px);
 
     }
 
@@ -864,13 +859,7 @@ RESPONSIVE
 
 }
 
-.hero-label{
 
-    font-size:11px;
-
-    letter-spacing:4px;
-
-}
 
 .brand-g{
 
