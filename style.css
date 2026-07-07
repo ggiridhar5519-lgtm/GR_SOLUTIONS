@@ -3104,7 +3104,7 @@ GLOBAL MOBILE SAFETY NET
 ABOUT
 ========================= */
 /*=========================================
-ABOUT
+ABOUT V2
 PART 1
 =========================================*/
 
@@ -3112,83 +3112,83 @@ PART 1
 
     position:relative;
 
-    padding:150px 8%;
+    padding:160px 8%;
 
-    background:#eef2f7;
+    background:#f5f7fb;
 
     overflow:hidden;
 
 }
 
-.about::before{
+/*==========================
+BACKGROUND GLOW
+==========================*/
 
-    content:"";
+.about-bg-glow{
 
     position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(180px);
+
+    pointer-events:none;
+
+}
+
+.glow-left{
+
+    width:520px;
+
+    height:520px;
+
+    background:rgba(200,155,94,.18);
+
+    top:-220px;
+
+    left:-180px;
+
+}
+
+.glow-right{
 
     width:500px;
 
     height:500px;
 
-    border-radius:50%;
+    background:rgba(37,99,235,.12);
 
-    background:#c89b5e;
+    right:-180px;
 
-    opacity:.08;
-
-    filter:blur(170px);
-
-    top:-180px;
-
-    left:-120px;
+    bottom:-220px;
 
 }
 
-.about::after{
+/*==========================
+GLASS PANEL
+==========================*/
 
-    content:"";
-
-    position:absolute;
-
-    width:450px;
-
-    height:450px;
-
-    border-radius:50%;
-
-    background:#2563eb;
-
-    opacity:.06;
-
-    filter:blur(170px);
-
-    bottom:-180px;
-
-    right:-120px;
-
-}
-
-.about-container{
+.about-glass{
 
     position:relative;
 
     z-index:2;
 
-    max-width:1400px;
+    max-width:1450px;
 
     margin:auto;
 
-    padding:80px;
+    padding:90px;
 
     border-radius:42px;
 
-    background:rgba(255,255,255,.55);
+    background:rgba(255,255,255,.72);
 
-    backdrop-filter:blur(22px);
+    backdrop-filter:blur(24px);
 
-    -webkit-backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(24px);
 
-    border:1px solid rgba(255,255,255,.45);
+    border:1px solid rgba(255,255,255,.9);
 
     box-shadow:
 
@@ -3204,9 +3204,9 @@ HEADER
 
     text-align:center;
 
-    max-width:900px;
+    max-width:850px;
 
-    margin:0 auto 90px;
+    margin:auto auto 90px;
 
 }
 
@@ -3214,15 +3214,21 @@ HEADER
 
     display:inline-block;
 
+    padding:10px 20px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.65);
+
+    border:1px solid rgba(255,255,255,.9);
+
     font-size:13px;
 
     font-weight:700;
 
-    letter-spacing:5px;
+    letter-spacing:2px;
 
-    text-transform:uppercase;
-
-    color:#9ca3af;
+    color:#64748b;
 
     margin-bottom:28px;
 
@@ -3230,15 +3236,17 @@ HEADER
 
 .about-title{
 
-    font-size:68px;
+    font-size:64px;
 
     font-weight:900;
 
-    line-height:1.05;
+    line-height:1.08;
 
     letter-spacing:-2px;
 
     color:#111827;
+
+    margin-bottom:28px;
 
 }
 
@@ -3254,37 +3262,15 @@ HEADER
 
 }
 
-/*==========================
-CONTENT
-==========================*/
+.about-subtitle{
 
-.about-content{
+    max-width:650px;
 
-    display:grid;
+    margin:auto;
 
-    grid-template-columns:58% 42%;
+    font-size:20px;
 
-    gap:80px;
-
-    align-items:center;
-
-}
-
-.about-left{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:28px;
-
-}
-
-.about-text{
-
-    font-size:21px;
-
-    line-height:2;
+    line-height:1.9;
 
     color:#64748b;
 
@@ -3292,11 +3278,84 @@ CONTENT
 
 }
 
-.about-text strong{
+/*==========================
+BODY
+==========================*/
+
+.about-body{
+
+    display:grid;
+
+    grid-template-columns:58% 42%;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-left h3{
+
+    font-size:42px;
+
+    line-height:1.2;
 
     color:#111827;
 
+    margin-bottom:28px;
+
 }
+
+.about-left p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#64748b;
+
+    margin-bottom:40px;
+
+}
+
+.about-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    background:#111827;
+
+    color:#fff;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.about-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(17,24,39,.18);
+
+}
+
+/*=========================================
+ABOUT V2
+PART 2
+=========================================*/
+
+/*==========================
+RIGHT SIDE STATS
+==========================*/
 
 .about-right{
 
@@ -3304,44 +3363,45 @@ CONTENT
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:25px;
+    gap:24px;
 
 }
 
-/*=========================================
-ABOUT
-PART 2
-=========================================*/
+.stat-card{
 
-/*==========================
-STATS
-==========================*/
+    position:relative;
 
-.about-stat{
+    padding:36px;
 
-    background:rgba(255,255,255,.55);
+    border-radius:28px;
+
+    background:rgba(255,255,255,.58);
 
     backdrop-filter:blur(18px);
 
-    border:1px solid rgba(255,255,255,.45);
+    -webkit-backdrop-filter:blur(18px);
 
-    border-radius:26px;
+    border:1px solid rgba(255,255,255,.9);
 
-    padding:38px;
+    box-shadow:
+    0 20px 50px rgba(15,23,42,.06);
 
     transition:.35s ease;
 
 }
 
-.about-stat:hover{
+.stat-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
-    box-shadow:0 25px 50px rgba(0,0,0,.08);
+    background:rgba(255,255,255,.82);
+
+    box-shadow:
+    0 30px 70px rgba(15,23,42,.12);
 
 }
 
-.about-stat h3{
+.stat-card h3{
 
     font-size:56px;
 
@@ -3349,17 +3409,21 @@ STATS
 
     color:#111827;
 
-    line-height:1;
+    margin-bottom:10px;
 
-    margin-bottom:12px;
+    line-height:1;
 
 }
 
-.about-stat span{
+.stat-card span{
+
+    display:block;
+
+    font-size:15px;
 
     color:#64748b;
 
-    font-size:16px;
+    line-height:1.7;
 
 }
 
@@ -3373,21 +3437,14 @@ DIVIDER
 
     height:1px;
 
-   background:
+    margin:90px auto 70px;
 
-  linear-gradient(
-
-  90deg,
-
-  transparent,
-
-  rgba(17,24,39,.15),
-
-  transparent
-
-);
-
-    margin:100px auto 80px;
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(17,24,39,.16),
+    transparent);
 
     transition:1.2s ease;
 
@@ -3400,7 +3457,7 @@ DIVIDER
 }
 
 /*==========================
-VALUES
+VALUE CARDS
 ==========================*/
 
 .about-values{
@@ -3415,31 +3472,63 @@ VALUES
 
 .value-card{
 
-    padding:35px;
+    position:relative;
+
+    padding:38px 34px;
+
+    border-radius:28px;
 
     background:rgba(255,255,255,.55);
 
     backdrop-filter:blur(18px);
 
-    border:1px solid rgba(255,255,255,.45);
+    -webkit-backdrop-filter:blur(18px);
 
-    border-radius:28px;
+    border:1px solid rgba(255,255,255,.85);
+
+    box-shadow:
+    0 20px 45px rgba(15,23,42,.05);
 
     transition:.35s ease;
 
-    opacity:0;
-
-    transform:translateY(30px);
+    overflow:hidden;
 
 }
 
 .value-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
-    box-shadow:0 25px 55px rgba(0,0,0,.08);
+    background:rgba(255,255,255,.82);
 
-    background:rgba(255,255,255,.78);
+    box-shadow:
+    0 35px 80px rgba(15,23,42,.12);
+
+}
+
+.value-card span{
+
+    display:inline-flex;
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:24px;
+
+    background:#111827;
+
+    color:#fff;
+
+    font-weight:700;
+
+    font-size:14px;
 
 }
 
@@ -3455,25 +3544,30 @@ VALUES
 
 .value-card p{
 
-    color:#64748b;
+    font-size:16px;
 
     line-height:1.9;
 
-    font-size:16px;
+    color:#64748b;
 
 }
 
+/*=========================================
+ABOUT V2
+PART 3
+=========================================*/
+
 /*==========================
-SHOW ANIMATION
+ANIMATIONS
 ==========================*/
 
-.about-title span.show{
+.about-title span{
 
-    opacity:1;
+    opacity:0;
 
-    transform:translateY(0);
+    transform:translateY(35px);
 
-    filter:blur(0);
+    filter:blur(10px);
 
     transition:
 
@@ -3485,13 +3579,75 @@ SHOW ANIMATION
 
 }
 
-.about-text.show{
+.about-title span.show{
 
     opacity:1;
 
     transform:translateY(0);
 
+    filter:blur(0);
+
+}
+
+.about-subtitle{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
     transition:.8s ease;
+
+}
+
+.about-subtitle.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.about-left{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.8s ease;
+
+}
+
+.about-left.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.stat-card{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+}
+
+.stat-card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.7s ease;
+
+}
+
+.value-card{
+
+    opacity:0;
+
+    transform:translateY(35px);
 
 }
 
@@ -3501,7 +3657,57 @@ SHOW ANIMATION
 
     transform:translateY(0);
 
-    transition:.8s ease;
+    transition:.7s ease;
+
+}
+
+/*==========================
+GLASS SHINE
+==========================*/
+
+.about-glass::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent 25%,
+
+    rgba(255,255,255,.35) 50%,
+
+    transparent 75%
+
+    );
+
+    transform:translateX(-140%);
+
+    animation:glassMove 10s linear infinite;
+
+    pointer-events:none;
+
+}
+
+@keyframes glassMove{
+
+    0%{
+
+        transform:translateX(-140%);
+
+    }
+
+    100%{
+
+        transform:translateX(140%);
+
+    }
 
 }
 
@@ -3511,11 +3717,23 @@ RESPONSIVE
 
 @media(max-width:992px){
 
-.about-content{
+.about-glass{
+
+    padding:60px;
+
+}
+
+.about-title{
+
+    font-size:48px;
+
+}
+
+.about-body{
 
     grid-template-columns:1fr;
 
-    gap:60px;
+    gap:50px;
 
 }
 
@@ -3528,12 +3746,6 @@ RESPONSIVE
 .about-values{
 
     grid-template-columns:repeat(2,1fr);
-
-}
-
-.about-title{
-
-    font-size:52px;
 
 }
 
@@ -3547,17 +3759,43 @@ RESPONSIVE
 
 }
 
-.about-title{
+.about-glass{
 
-    font-size:38px;
+    padding:35px 25px;
 
-    line-height:1.15;
+    border-radius:28px;
 
 }
 
-.about-text{
+.about-header{
+
+    margin-bottom:55px;
+
+}
+
+.about-title{
+
+    font-size:34px;
+
+    line-height:1.2;
+
+}
+
+.about-subtitle{
 
     font-size:17px;
+
+}
+
+.about-left h3{
+
+    font-size:28px;
+
+}
+
+.about-left p{
+
+    font-size:16px;
 
     line-height:1.9;
 
@@ -3575,13 +3813,13 @@ RESPONSIVE
 
 }
 
-.about-stat{
+.stat-card{
 
     padding:28px;
 
 }
 
-.about-stat h3{
+.stat-card h3{
 
     font-size:42px;
 
@@ -3595,12 +3833,11 @@ RESPONSIVE
 
 .about-divider{
 
-    margin:70px auto 50px;
+    margin:60px auto 45px;
 
 }
 
 }
-
 
 
 .tech-showcase{
