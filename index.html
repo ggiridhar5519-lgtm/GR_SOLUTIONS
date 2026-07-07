@@ -2374,6 +2374,157 @@ if(heroArrow){
 
 }
 </script>
+
+
+    <script>
+/*=========================================
+ABOUT SECTION ANIMATION
+=========================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const about = document.querySelector(".about");
+
+    if(!about) return;
+
+    const titleLines = document.querySelectorAll(".about-title span");
+    const texts = document.querySelectorAll(".about-text");
+    const cards = document.querySelectorAll(".value-card");
+    const stats = document.querySelectorAll(".about-stat h3");
+    const divider = document.querySelector(".about-divider");
+
+    let played = false;
+
+    const observer = new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting && !played){
+
+                played = true;
+
+                /*==================
+                TITLE
+                ==================*/
+
+                titleLines.forEach((line,index)=>{
+
+                    setTimeout(()=>{
+
+                        line.classList.add("show");
+
+                    },index*250);
+
+                });
+
+                /*==================
+                TEXT
+                ==================*/
+
+                texts.forEach((text,index)=>{
+
+                    setTimeout(()=>{
+
+                        text.classList.add("show");
+
+                    },900+(index*250));
+
+                });
+
+                /*==================
+                COUNTERS
+                ==================*/
+
+                setTimeout(()=>{
+
+                    stats.forEach(counter=>{
+
+                        const target = Number(counter.dataset.count);
+
+                        let value = 0;
+
+                        const speed = Math.max(15,1000/target);
+
+                        const timer = setInterval(()=>{
+
+                            value++;
+
+                            counter.innerHTML=value;
+
+                            if(value>=target){
+
+                                clearInterval(timer);
+
+                                if(target===100){
+
+                                    counter.innerHTML="100%";
+
+                                }
+
+                                else if(target===24){
+
+                                    counter.innerHTML="24/7";
+
+                                }
+
+                                else if(target===50){
+
+                                    counter.innerHTML="50+";
+
+                                }
+
+                                else{
+
+                                    counter.innerHTML=target+"+";
+
+                                }
+
+                            }
+
+                        },speed);
+
+                    });
+
+                },1200);
+
+                /*==================
+                DIVIDER
+                ==================*/
+
+                setTimeout(()=>{
+
+                    divider.classList.add("show");
+
+                },1600);
+
+                /*==================
+                VALUE CARDS
+                ==================*/
+
+                cards.forEach((card,index)=>{
+
+                    setTimeout(()=>{
+
+                        card.classList.add("show");
+
+                    },1800+(index*180));
+
+                });
+
+            }
+
+        });
+
+    },{
+
+        threshold:.35
+
+    });
+
+    observer.observe(about);
+
+});
+</script>
     
 </body>
 </html>
