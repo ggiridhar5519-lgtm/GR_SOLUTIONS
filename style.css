@@ -489,9 +489,9 @@ color:white;
 /* =========================
 HERO
 ========================= */
-
 /*=========================================
-MINIMAL PREMIUM HERO
+PREMIUM HERO
+PART 1
 =========================================*/
 
 .hero{
@@ -502,79 +502,91 @@ MINIMAL PREMIUM HERO
 
     display:flex;
 
+    justify-content:center;
+
     align-items:center;
 
-    justify-content:flex-start;
+    text-align:center;
 
-    padding:0 8%;
+    overflow:hidden;
 
     background:#ffffff;
+
+    padding:140px 30px 90px;
+
+}
+
+/*==========================
+BACKGROUND BRAND
+==========================*/
+
+.hero-brand{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
 
     overflow:hidden;
 
 }
 
-/*=============================
-BACKGROUND GLOW
-=============================*/
-
-.hero::before{
-
-    content:"";
+.brand-g{
 
     position:absolute;
 
-    width:700px;
+    top:-70px;
 
-    height:700px;
+    left:-40px;
 
-    background:radial-gradient(circle,
-    rgba(37,99,235,.08),
-    transparent 70%);
+    font-size:550px;
 
-    top:-180px;
+    font-weight:900;
 
-    right:-180px;
+    color:#111827;
 
-    pointer-events:none;
+    opacity:.025;
+
+    user-select:none;
+
+    line-height:1;
 
 }
 
-.hero::after{
-
-    content:"";
+.brand-r{
 
     position:absolute;
 
-    width:500px;
+    right:-40px;
 
-    height:500px;
+    bottom:-170px;
 
-    background:radial-gradient(circle,
-    rgba(15,23,42,.04),
-    transparent 70%);
+    font-size:550px;
 
-    bottom:-200px;
+    font-weight:900;
 
-    left:-150px;
+    color:#111827;
 
-    pointer-events:none;
+    opacity:.025;
+
+    user-select:none;
+
+    line-height:1;
 
 }
 
-/*=============================
+/*==========================
 CONTENT
-=============================*/
+==========================*/
 
 .hero-container{
 
     position:relative;
 
-    z-index:2;
+    z-index:10;
 
-    max-width:760px;
-
-    animation:heroFade 1s ease;
+    max-width:900px;
 
 }
 
@@ -582,45 +594,57 @@ CONTENT
 
     display:inline-block;
 
-    margin-bottom:30px;
+    margin-bottom:35px;
 
     font-size:13px;
 
     font-weight:700;
 
-    letter-spacing:4px;
-
-    text-transform:uppercase;
+    letter-spacing:6px;
 
     color:#64748b;
+
+    text-transform:uppercase;
 
 }
 
 .hero-title{
 
-    font-size:82px;
-
-    line-height:.95;
+    font-size:78px;
 
     font-weight:900;
 
+    line-height:1.04;
+
+    letter-spacing:-3px;
+
     color:#111827;
 
-    margin-bottom:35px;
+    margin-bottom:40px;
 
 }
 
-.hero-title span{
+.hero-title .word{
 
-    display:block;
+    display:inline-block;
 
-    margin-top:12px;
+    margin:0 10px;
+
+    opacity:0;
+
+    filter:blur(12px);
+
+    transform:translateY(35px);
+
+    color:#bfc5cf;
 
 }
 
 .hero-description{
 
-    max-width:560px;
+    max-width:650px;
+
+    margin:auto;
 
     font-size:21px;
 
@@ -628,19 +652,28 @@ CONTENT
 
     color:#6b7280;
 
+    opacity:0;
+
 }
 
-/*=============================
+/*=========================================
+PREMIUM HERO
+PART 2
+=========================================*/
+
+/*==========================
 SCROLL BUTTON
-=============================*/
+==========================*/
 
 .scroll-indicator{
 
     position:absolute;
 
-    right:70px;
+    bottom:45px;
 
-    bottom:60px;
+    left:50%;
+
+    transform:translateX(-50%);
 
     width:68px;
 
@@ -650,99 +683,148 @@ SCROLL BUTTON
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
+
+    align-items:center;
 
     text-decoration:none;
 
     color:#111827;
 
-    background:rgba(255,255,255,.65);
+    background:rgba(255,255,255,.75);
 
     border:1px solid rgba(17,24,39,.08);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(20px);
 
     box-shadow:
-    0 20px 50px rgba(0,0,0,.08);
+    0 15px 40px rgba(0,0,0,.08);
 
-    transition:.35s;
+    transition:.35s ease;
 
-    animation:arrowFloat 3s ease-in-out infinite;
+    opacity:0;
+
+    z-index:20;
 
 }
 
 .scroll-indicator:hover{
 
-    transform:translateY(-6px);
+    transform:translateX(-50%) translateY(-8px);
 
     box-shadow:
-    0 30px 70px rgba(0,0,0,.12);
+    0 25px 60px rgba(0,0,0,.15);
 
 }
 
-/*=============================
+.scroll-indicator svg{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+/*==========================
+SHOW CLASSES
+==========================*/
+
+.hero-title .word.show{
+
+    opacity:1;
+
+    filter:blur(0);
+
+    transform:translateY(0);
+
+    transition:
+
+    opacity .8s cubic-bezier(.22,1,.36,1),
+
+    transform .8s cubic-bezier(.22,1,.36,1),
+
+    filter .8s ease,
+
+    color .8s ease;
+
+}
+
+.hero-title.finish .word{
+
+    color:#111827;
+
+}
+
+.hero-description.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:
+
+    opacity .8s ease,
+
+    transform .8s ease;
+
+}
+
+.scroll-indicator.show{
+
+    opacity:1;
+
+    animation:arrowFloat 2.8s ease-in-out infinite;
+
+}
+
+/*==========================
 ANIMATION
-=============================*/
-
-@keyframes heroFade{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
+==========================*/
 
 @keyframes arrowFloat{
 
     0%,100%{
 
-        transform:translateY(0);
+        transform:
+        translateX(-50%)
+        translateY(0);
 
     }
 
     50%{
 
-        transform:translateY(-10px);
+        transform:
+        translateX(-50%)
+        translateY(-10px);
 
     }
 
 }
 
-/*=============================
+/*==========================
 RESPONSIVE
-=============================*/
+==========================*/
 
 @media(max-width:992px){
 
-.hero{
-
-    padding:140px 50px 80px;
-
-}
-
 .hero-title{
 
-    font-size:62px;
+    font-size:60px;
 
 }
 
 .hero-description{
 
     font-size:18px;
+
+    max-width:560px;
+
+}
+
+.brand-g,
+.brand-r{
+
+    font-size:360px;
 
 }
 
@@ -752,17 +834,25 @@ RESPONSIVE
 
 .hero{
 
-    padding:120px 25px 70px;
-
-    align-items:flex-start;
+    padding:120px 20px 90px;
 
 }
 
 .hero-title{
 
-    font-size:42px;
+    font-size:40px;
 
-    line-height:1.08;
+    letter-spacing:-1px;
+
+    line-height:1.15;
+
+}
+
+.hero-title .word{
+
+    display:block;
+
+    margin:8px 0;
 
 }
 
@@ -774,23 +864,41 @@ RESPONSIVE
 
 }
 
+.hero-label{
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+}
+
+.brand-g{
+
+    left:-60px;
+
+    top:20px;
+
+    font-size:220px;
+
+}
+
+.brand-r{
+
+    right:-60px;
+
+    bottom:-20px;
+
+    font-size:220px;
+
+}
+
 .scroll-indicator{
 
     width:56px;
 
     height:56px;
 
-    right:25px;
-
     bottom:30px;
-
-}
-
-.hero-label{
-
-    font-size:12px;
-
-    letter-spacing:3px;
 
 }
 
