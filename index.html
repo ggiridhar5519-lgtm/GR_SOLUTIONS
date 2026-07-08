@@ -516,7 +516,7 @@ SERVICES
         <small>Google Optimized</small>
     </div>
 
-</div>s
+</div>
 
             </div>
 
@@ -2259,98 +2259,7 @@ document.querySelectorAll(".site-hero button").forEach(btn=>{
 HERO BACKGROUND SLIDER
 =========================================*/
 
-const heroSlides = document.querySelectorAll(".hero-slide");
-const heroIndicators = document.querySelectorAll(".indicator");
 
-let currentSlide = 0;
-
-function showSlide(index){
-
-    heroSlides.forEach(slide=>{
-
-        slide.classList.remove("active");
-
-    });
-
-    heroIndicators.forEach(dot=>{
-
-        dot.classList.remove("active");
-
-    });
-
-    heroSlides[index].classList.add("active");
-
-    heroIndicators[index].classList.add("active");
-
-}
-
-function nextSlide(){
-
-    currentSlide++;
-
-    if(currentSlide>=heroSlides.length){
-
-        currentSlide=0;
-
-    }
-
-    showSlide(currentSlide);
-
-}
-
-/* Auto Change */
-
-setInterval(nextSlide,5000);
-
-/* Click Indicators */
-
-heroIndicators.forEach((dot,index)=>{
-
-    dot.addEventListener("click",()=>{
-
-        currentSlide=index;
-
-        showSlide(currentSlide);
-
-    });
-
-});
-
-/*=========================================
-HERO TEXT ANIMATION
-=========================================*/
-
-const heroContent=document.querySelector(".hero-content");
-
-window.addEventListener("load",()=>{
-
-    heroContent.animate([
-
-        {
-            opacity:0,
-            transform:"translateY(50px)"
-        },
-
-        {
-            opacity:1,
-            transform:"translateY(0)"
-        }
-
-    ],{
-
-        duration:1000,
-
-        easing:"ease-out",
-
-        fill:"forwards"
-
-    });
-
-});
-
-</script>
-
-    <script>
 /*=========================================
 PREMIUM HERO CINEMATIC REVEAL
 =========================================*/
