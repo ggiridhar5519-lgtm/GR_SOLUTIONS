@@ -2339,13 +2339,13 @@ if(!about) return;
 const title=document.querySelectorAll(".about-title span");
 const subtitle=document.querySelector(".about-subtitle");
 const left=document.querySelector(".about-left");
-const stats=document.querySelectorAll(".stat-card");
+const stats=document.querySelectorAll(".about-stat-card");
 const values=document.querySelectorAll(".value-card");
 const divider=document.querySelector(".about-divider");
 
 let played=false;
 
-const observer=new IntersectionObserver((entries)=>{
+const aboutObserver=new IntersectionObserver((entries)=>{
 
 entries.forEach(entry=>{
 
@@ -2407,7 +2407,7 @@ COUNTER
 
 setTimeout(()=>{
 
-document.querySelectorAll(".stat-card h3").forEach(counter=>{
+document.querySelectorAll(".about-stat-card h3").forEach(counter=>{
 
 const target=parseInt(counter.dataset.count);
 
@@ -2475,7 +2475,7 @@ card.classList.add("show");
 
 });
 
-observer.disconnect();
+aboutObserver.disconnect();
 
 }
 
@@ -2485,7 +2485,7 @@ observer.disconnect();
 threshold:.35
 });
 
-observer.observe(about);
+aboutObserver.observe(about);
 
 });
 </script>
