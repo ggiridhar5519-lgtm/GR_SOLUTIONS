@@ -3367,7 +3367,7 @@ RIGHT SIDE STATS
 
 }
 
-.stat-card{
+    .about-stat-card{
 
     position:relative;
 
@@ -3633,7 +3633,7 @@ ANIMATIONS
 
 }
 
-.stat-card.show{
+.about-stat-card.show{
 
     opacity:1;
 
