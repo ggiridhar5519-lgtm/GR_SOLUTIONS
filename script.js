@@ -152,7 +152,7 @@ cards.forEach(card=>{
 
 // Hero animation code
 
-});
+
 
 // =========================
 // ABOUT REVEAL
