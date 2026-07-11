@@ -3769,13 +3769,13 @@ TECH STACK V2
 
     transform:translate(-50%,-50%);
 
-    font-size:32vw;
+    font-size:18vw;
 
     font-weight:900;
 
     letter-spacing:-25px;
 
-    color:rgba(255,255,255,.035);
+    color:rgba(255,255,255,.02);
 
     user-select:none;
 
@@ -3898,13 +3898,13 @@ TECH PILLS
 
     gap:18px;
 
-    padding:22px 26px;
+    padding:18px 22px;
 
     background:rgba(255,255,255,.05);
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:22px;
+    border-radius:18px;
 
     backdrop-filter:blur(20px);
 
@@ -3927,6 +3927,39 @@ TECH PILLS
     box-shadow:
     0 20px 60px rgba(0,0,0,.35);
 
+}
+
+
+.tech-pill:nth-child(1):hover{
+box-shadow:0 0 35px rgba(227,79,38,.35);
+}
+
+.tech-pill:nth-child(2):hover{
+box-shadow:0 0 35px rgba(38,77,228,.35);
+}
+
+.tech-pill:nth-child(3):hover{
+box-shadow:0 0 35px rgba(247,223,30,.35);
+}
+
+.tech-pill:nth-child(4):hover{
+box-shadow:0 0 35px rgba(97,218,251,.35);
+}
+
+.tech-pill:nth-child(5):hover{
+box-shadow:0 0 35px rgba(221,27,22,.35);
+}
+
+.tech-pill:nth-child(6):hover{
+box-shadow:0 0 35px rgba(104,160,99,.35);
+}
+
+.tech-pill:nth-child(7):hover{
+box-shadow:0 0 35px rgba(255,70,70,.35);
+}
+
+.tech-pill:nth-child(8):hover{
+box-shadow:0 0 35px rgba(255,212,59,.35);
 }
 
 .tech-pill i{
@@ -4019,7 +4052,7 @@ RESPONSIVE
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:16px;
+    gap:20px;
 
 }
 
