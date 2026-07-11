@@ -5162,3 +5162,86 @@ MOBILE
 }
 
 }
+
+
+/*=========================================
+COMING SOON TOAST
+=========================================*/
+
+.toast{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:18px 24px;
+
+    min-width:320px;
+
+    border-radius:18px;
+
+    background:rgba(20,20,20,.92);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+    color:#fff;
+
+    transform:translateY(120px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.45s ease;
+
+    z-index:99999;
+
+}
+
+.toast.show{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.toast i{
+
+    font-size:28px;
+
+    color:#3b82f6;
+
+}
+
+.toast h4{
+
+    margin:0;
+
+    font-size:18px;
+
+}
+
+.toast p{
+
+    margin-top:5px;
+
+    color:#bdbdbd;
+
+    font-size:14px;
+
+}
