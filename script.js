@@ -205,3 +205,36 @@ threshold:.25
 observer.observe(services);
 
 });
+
+
+/*=========================================
+TECH STACK REVEAL
+=========================================*/
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const tech=document.querySelector(".tech-stack");
+
+if(!tech) return;
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+tech.classList.add("show");
+
+observer.disconnect();
+
+}
+
+});
+
+},{
+threshold:.25
+});
+
+observer.observe(tech);
+
+});
