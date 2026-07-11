@@ -3741,144 +3741,327 @@ ABOUT ANIMATION
 
 }
 
+/*=========================================
+TECH STACK V2
+=========================================*/
 
-
-
-.tech-showcase{
+.tech-stack{
 
     position:relative;
-    height:700px;
+
+    background:#050505;
+
+    padding:140px 8%;
+
     overflow:hidden;
 
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-
 }
 
-.tech-bg{
+/*========================*/
 
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-display:block;
-
-border-radius:40px;
-
-filter:brightness(.55);
-
-transition:0.5s;
-
-}
-
-.tech-card{
+.tech-bg-gr{
 
     position:absolute;
 
-    display:flex;
-    align-items:center;
-    gap:10px;
+    top:50%;
 
-    padding:18px 28px;
+    left:50%;
 
-    border-radius:18px;
+    transform:translate(-50%,-50%);
 
-    background:rgba(35,35,35,.8);
+    font-size:32vw;
 
-    backdrop-filter:blur(20px);
+    font-weight:900;
 
-    color:#fff;
+    letter-spacing:-25px;
 
-    font-weight:700;
+    color:rgba(255,255,255,.035);
 
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    user-select:none;
 
-    animation:moveUp linear infinite;
+    pointer-events:none;
 
-}
+    z-index:1;
 
-@keyframes moveUp{
-
-    from{
-
-        transform:translateY(750px);
-
-    }
-
-    to{
-
-        transform:translateY(-900px);
-
-    }
+    animation:grFloat 18s ease-in-out infinite;
 
 }
 
-.tech-card i{
+@keyframes grFloat{
 
-    font-size:26px;
+0%,100%{
 
-}
+transform:translate(-50%,-50%);
 
-
-.html i{
-color:#E34F26;
-}
-
-.css i{
-color:#1572B6;
-}
-
-.js i{
-color:#F7DF1E;
-}
-
-.react i{
-color:#61DAFB;
-}
-
-.docker i{
-color:#2496ED;
-}
-
-.aws i{
-color:#FF9900;
-}
-
-
-
-@keyframes floatTech{
-
-0%{
-transform:translateY(0);
 }
 
 50%{
-transform:translateY(-15px);
-}
 
-100%{
-transform:translateY(0);
-}
+transform:translate(-50%,-53%);
 
 }
 
+}
 
-.tech-card:hover{
+/*========================*/
 
-    transform:
-    translateY(-15px)
-    scale(1.08)
-    rotate(3deg);
+.tech-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+.tech-tag{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#dbeafe;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:30px;
+
+}
+
+.tech-title{
+
+    color:#fff;
+
+    font-size:64px;
+
+    line-height:1.05;
+
+    font-weight:900;
+
+    letter-spacing:-2px;
+
+    max-width:760px;
+
+    margin-bottom:28px;
+
+}
+
+.tech-subtitle{
+
+    max-width:700px;
+
+    color:rgba(255,255,255,.70);
+
+    font-size:19px;
+
+    line-height:2;
+
+    margin-bottom:70px;
+
+}
+
+/*========================*/
+
+.tech-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+/*=========================================
+TECH PILLS
+=========================================*/
+
+.tech-pill{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:22px 26px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    transition:.35s ease;
+
+    cursor:pointer;
+
+}
+
+.tech-pill:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.08);
+
+    border-color:rgba(255,255,255,.18);
 
     box-shadow:
-    0 25px 60px rgba(0,0,0,.35);
-
-    background:rgba(255,255,255,.18);
+    0 20px 60px rgba(0,0,0,.35);
 
 }
+
+.tech-pill i{
+
+    font-size:42px;
+
+    transition:.35s;
+
+}
+
+.tech-pill:hover i{
+
+    transform:scale(1.15) rotate(5deg);
+
+}
+
+.tech-pill span{
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+}
+
+/*=========================================
+REVEAL
+=========================================*/
+
+.tech-container{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+    opacity .9s ease,
+    transform .9s ease;
+
+}
+
+.tech-stack.show .tech-container{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px){
+
+.tech-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.tech-stack{
+
+    padding:100px 20px;
+
+}
+
+.tech-title{
+
+    font-size:40px;
+
+}
+
+.tech-subtitle{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+.tech-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+.tech-pill{
+
+    padding:18px;
+
+}
+
+.tech-pill i{
+
+    font-size:32px;
+
+}
+
+.tech-pill span{
+
+    font-size:15px;
+
+}
+
+.tech-bg-gr{
+
+    font-size:55vw;
+
+    letter-spacing:-10px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.tech-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
 
 
 /* ===========================
