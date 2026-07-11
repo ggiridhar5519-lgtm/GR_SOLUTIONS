@@ -1520,6 +1520,233 @@ RESPONSIVE
 }
 
 /*=========================================
+FEATURED WORK PREMIUM POLISH
+=========================================*/
+
+/* Better spacing */
+
+.industry-wrapper{
+
+    gap:120px;
+
+    margin-top:110px;
+
+}
+
+/* Card */
+
+.industry-card{
+
+    align-items:center;
+
+    gap:90px;
+
+}
+
+/* Browser */
+
+.industry-preview{
+
+    border-radius:34px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(17,24,39,.08);
+
+    box-shadow:
+    0 35px 90px rgba(0,0,0,.08);
+
+    transition:.45s ease;
+
+}
+
+.industry-preview:hover{
+
+    transform:
+    translateY(-12px)
+    scale(1.02);
+
+    box-shadow:
+    0 55px 120px rgba(0,0,0,.16);
+
+}
+
+/* Browser Top */
+
+.site-header{
+
+    height:84px;
+
+    padding:0 40px;
+
+    background:#ffffff;
+
+}
+
+/* Hero */
+
+.site-hero{
+
+    min-height:320px;
+
+    padding:70px 55px;
+
+}
+
+.site-hero h3{
+
+    font-size:50px;
+
+    line-height:1.05;
+
+}
+
+.site-hero button{
+
+    padding:18px 34px;
+
+    border-radius:60px;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+.site-hero button:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 25px 45px rgba(0,0,0,.18);
+
+}
+
+/* Bottom */
+
+.site-services{
+
+    padding:40px;
+
+    gap:24px;
+
+}
+
+.site-services div{
+
+    border-radius:22px;
+
+    transition:.35s;
+
+}
+
+.site-services div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* Right */
+
+.industry-info{
+
+    max-width:560px;
+
+}
+
+.industry-info span{
+
+    background:#111827;
+
+    color:#fff;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    letter-spacing:2px;
+
+}
+
+.industry-info h3{
+
+    font-size:58px;
+
+    line-height:1.05;
+
+    margin:28px 0;
+
+}
+
+.industry-info p{
+
+    font-size:19px;
+
+    line-height:2;
+
+    color:#64748b;
+
+}
+
+/* Animation */
+
+.industry-card{
+
+    transition:
+    transform .45s ease,
+    opacity .8s ease;
+
+}
+
+.industry-card:hover .industry-info h3{
+
+    color:#2563eb;
+
+}
+
+.industry-card:hover .industry-info span{
+
+    background:#2563eb;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.industry-card{
+
+    gap:40px;
+
+}
+
+.site-hero{
+
+    padding:40px 25px;
+
+}
+
+.site-hero h3{
+
+    font-size:34px;
+
+}
+
+.industry-info h3{
+
+    font-size:36px;
+
+}
+
+.industry-info p{
+
+    font-size:16px;
+
+}
+
+}
+
+/*=========================================
 PROCESS V3 - PREMIUM DARK
 =========================================*/
 
