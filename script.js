@@ -368,3 +368,29 @@ fill.style.width="0%";
 });
 
 });
+
+/*=========================================
+SOCIAL TOAST
+=========================================*/
+
+const toast=document.getElementById("toast");
+
+document.querySelectorAll(".coming-soon").forEach(item=>{
+
+item.addEventListener("click",(e)=>{
+
+e.preventDefault();
+
+toast.classList.add("show");
+
+clearTimeout(window.toastTimer);
+
+window.toastTimer=setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},3000);
+
+});
+
+});
