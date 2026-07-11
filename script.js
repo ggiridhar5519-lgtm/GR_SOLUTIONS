@@ -185,3 +185,35 @@ threshold:.25
 observer.observe(about);
 
 });
+
+/*=========================================
+SERVICES REVEAL
+=========================================*/
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const services=document.querySelector(".services");
+
+if(!services) return;
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+services.classList.add("show");
+
+observer.disconnect();
+
+}
+
+});
+
+},{
+threshold:.25
+});
+
+observer.observe(services);
+
+});
