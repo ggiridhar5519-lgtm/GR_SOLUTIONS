@@ -238,3 +238,50 @@ threshold:.25
 observer.observe(tech);
 
 });
+
+/*=========================================
+INDUSTRIES DEMO
+=========================================*/
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const btn=document.querySelector(".explore-btn");
+    const browser=document.querySelector(".demo-browser");
+
+    if(!btn || !browser) return;
+
+    // Initially hide browser
+    browser.style.display="none";
+
+    btn.addEventListener("click",()=>{
+
+        // Hide button section
+        document.querySelector(".explore-area").style.display="none";
+
+        // Show browser
+        browser.style.display="block";
+
+        browser.animate([
+            {
+                opacity:0,
+                transform:"translateY(80px) scale(.95)"
+            },
+            {
+                opacity:1,
+                transform:"translateY(0) scale(1)"
+            }
+        ],{
+            duration:900,
+            easing:"ease-out",
+            fill:"forwards"
+        });
+
+        // Smooth scroll to browser
+        browser.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    });
+
+});
