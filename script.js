@@ -240,47 +240,94 @@ observer.observe(tech);
 });
 
 /*=========================================
-INDUSTRIES DEMO
+INDUSTRIES LIVE DEMO
 =========================================*/
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-    const btn=document.querySelector(".explore-btn");
-    const browser=document.querySelector(".demo-browser");
+    const exploreBtn = document.querySelector(".explore-btn");
+    const exploreArea = document.querySelector(".explore-area");
+    const browser = document.querySelector(".demo-browser");
 
-    if(!btn || !browser) return;
+    const loader = document.querySelector(".demo-loader");
+    const site = document.querySelector(".demo-site");
+    const progress = document.querySelector(".loader-fill");
 
-    // Initially hide browser
-    browser.style.display="none";
+    if (!exploreBtn || !browser) return;
 
-    btn.addEventListener("click",()=>{
+    browser.style.display = "none";
+    loader.style.display = "flex";
+    loader.style.opacity = "1";
+    site.style.display = "none";
 
-        // Hide button section
-        document.querySelector(".explore-area").style.display="none";
+    exploreBtn.addEventListener("click", () => {
 
-        // Show browser
-        browser.style.display="block";
+        exploreArea.style.display = "none";
+
+        browser.style.display = "block";
 
         browser.animate([
             {
-                opacity:0,
-                transform:"translateY(80px) scale(.95)"
+                opacity: 0,
+                transform: "translateY(70px) scale(.96)"
             },
             {
-                opacity:1,
-                transform:"translateY(0) scale(1)"
+                opacity: 1,
+                transform: "translateY(0) scale(1)"
             }
-        ],{
-            duration:900,
-            easing:"ease-out",
-            fill:"forwards"
+        ], {
+            duration: 700,
+            easing: "ease-out",
+            fill: "forwards"
         });
 
-        // Smooth scroll to browser
-        browser.scrollIntoView({
-            behavior:"smooth",
-            block:"center"
-        });
+        let value = 0;
+
+        progress.style.width = "0%";
+
+        const loading = setInterval(() => {
+
+            value++;
+
+            progress.style.width = value + "%";
+
+            if (value >= 100) {
+
+                clearInterval(loading);
+
+                setTimeout(() => {
+
+                    loader.style.transition = "opacity .6s ease";
+                    loader.style.opacity = "0";
+
+                    setTimeout(() => {
+
+                        loader.style.display = "none";
+
+                        site.style.display = "block";
+
+                        site.animate([
+                            {
+                                opacity: 0,
+                                transform: "translateY(40px)"
+                            },
+                            {
+                                opacity: 1,
+                                transform: "translateY(0)"
+                            }
+                        ], {
+                            duration: 700,
+                            easing: "ease-out",
+                            fill: "forwards"
+                        });
+
+                    }, 600);
+
+                }, 300);
+
+            }
+
+        }, 25);
 
     });
 
