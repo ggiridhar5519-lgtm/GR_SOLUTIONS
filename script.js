@@ -148,3 +148,40 @@ cards.forEach(card=>{
         -(Math.random()*25)+"s";
 
 });
+
+
+// Hero animation code
+
+});
+
+// =========================
+// ABOUT REVEAL
+// =========================
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const about=document.querySelector(".about");
+
+if(!about) return;
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+about.classList.add("show");
+
+observer.disconnect();
+
+}
+
+});
+
+},{
+threshold:.25
+});
+
+observer.observe(about);
+
+});
