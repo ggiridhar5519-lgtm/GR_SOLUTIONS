@@ -240,95 +240,131 @@ observer.observe(tech);
 });
 
 /*=========================================
-INDUSTRIES LIVE DEMO
+INDUSTRIES LIVE EXPERIENCE
 =========================================*/
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",()=>{
 
-    const exploreBtn = document.querySelector(".explore-btn");
-    const exploreArea = document.querySelector(".explore-area");
-    const browser = document.querySelector(".demo-browser");
+const btn=document.querySelector(".explore-btn");
+const explore=document.querySelector(".explore-area");
+const browser=document.querySelector(".demo-browser");
 
-    const loader = document.querySelector(".demo-loader");
-    const site = document.querySelector(".demo-site");
-    const progress = document.querySelector(".loader-fill");
+const loader=document.querySelector(".demo-loader");
+const site=document.querySelector(".demo-site");
+const fill=document.querySelector(".loader-fill");
+const back=document.querySelector(".demo-back");
 
-    if (!exploreBtn || !browser) return;
+if(!btn) return;
 
-    browser.style.display = "none";
-    loader.style.display = "flex";
-    loader.style.opacity = "1";
-    site.style.display = "none";
+browser.style.display="none";
+site.style.display="none";
 
-    exploreBtn.addEventListener("click", () => {
+btn.addEventListener("click",()=>{
 
-        exploreArea.style.display = "none";
+explore.style.display="none";
 
-        browser.style.display = "block";
+browser.style.display="block";
 
-        browser.animate([
-            {
-                opacity: 0,
-                transform: "translateY(70px) scale(.96)"
-            },
-            {
-                opacity: 1,
-                transform: "translateY(0) scale(1)"
-            }
-        ], {
-            duration: 700,
-            easing: "ease-out",
-            fill: "forwards"
-        });
+loader.style.display="flex";
+loader.style.opacity="1";
 
-        let value = 0;
+site.style.display="none";
 
-        progress.style.width = "0%";
+fill.style.width="0%";
 
-        const loading = setInterval(() => {
+browser.animate([
+{
+opacity:0,
+transform:"translateY(60px) scale(.96)"
+},
+{
+opacity:1,
+transform:"translateY(0) scale(1)"
+}
+],{
+duration:700,
+fill:"forwards",
+easing:"ease-out"
+});
 
-            value++;
+let progress=0;
 
-            progress.style.width = value + "%";
+const timer=setInterval(()=>{
 
-            if (value >= 100) {
+progress++;
 
-                clearInterval(loading);
+fill.style.width=progress+"%";
 
-                setTimeout(() => {
+if(progress>=100){
 
-                    loader.style.transition = "opacity .6s ease";
-                    loader.style.opacity = "0";
+clearInterval(timer);
 
-                    setTimeout(() => {
+setTimeout(()=>{
 
-                        loader.style.display = "none";
+loader.style.opacity="0";
 
-                        site.style.display = "block";
+setTimeout(()=>{
 
-                        site.animate([
-                            {
-                                opacity: 0,
-                                transform: "translateY(40px)"
-                            },
-                            {
-                                opacity: 1,
-                                transform: "translateY(0)"
-                            }
-                        ], {
-                            duration: 700,
-                            easing: "ease-out",
-                            fill: "forwards"
-                        });
+loader.style.display="none";
 
-                    }, 600);
+site.style.display="block";
 
-                }, 300);
+site.animate([
+{
+opacity:0,
+transform:"translateY(40px)"
+},
+{
+opacity:1,
+transform:"translateY(0)"
+}
+],{
+duration:700,
+fill:"forwards",
+easing:"ease-out"
+});
 
-            }
+},600);
 
-        }, 25);
+},300);
 
-    });
+}
+
+},25);
+
+});
+
+back.addEventListener("click",()=>{
+
+browser.animate([
+{
+opacity:1,
+transform:"translateY(0)"
+},
+{
+opacity:0,
+transform:"translateY(80px)"
+}
+],{
+duration:500,
+fill:"forwards"
+});
+
+setTimeout(()=>{
+
+browser.style.display="none";
+
+explore.style.display="block";
+
+loader.style.display="flex";
+loader.style.opacity="1";
+
+site.style.display="none";
+
+fill.style.width="0%";
+
+},500);
+
+});
 
 });
