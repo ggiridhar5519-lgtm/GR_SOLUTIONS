@@ -393,3 +393,43 @@ toast.classList.remove("show");
 });
 
 });
+
+
+/*=========================================
+WHATSAPP CONTACT FORM
+=========================================*/
+
+const contactForm = document.getElementById("contactForm");
+
+if(contactForm){
+
+contactForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const name=this.querySelector('input[type="text"]').value;
+
+const email=this.querySelector('input[type="email"]').value;
+
+const business=this.querySelectorAll('input[type="text"]')[1].value;
+
+const project=this.querySelector("textarea").value;
+
+const message=`*New Website Enquiry* 🚀
+
+👤 Name: ${name}
+
+📧 Email: ${email}
+
+🏢 Business: ${business}
+
+📝 Project:
+${project}`;
+
+const url=`https://wa.me/919515504419?text=${encodeURIComponent(message)}`;
+
+window.open(url,"_blank");
+
+});
+
+}
