@@ -536,20 +536,23 @@ BACKGROUND BRAND
     position:absolute;
 
     top:-70px;
-
     left:-40px;
 
-    font-size:550px;
+    font-size:620px;      /* 550 → 620 */
 
     font-weight:900;
 
     color:#111827;
 
-    opacity:.025;
+    opacity:.055;          /* .025 → .055 */
+
+    letter-spacing:-22px;
 
     user-select:none;
 
-    line-height:1;
+    line-height:.85;
+
+    font-family:"Arial Black",sans-serif;
 
 }
 
@@ -561,20 +564,23 @@ BACKGROUND BRAND
 
     bottom:-170px;
 
-    font-size:550px;
+    font-size:620px;      /* 550 → 620 */
 
     font-weight:900;
 
     color:#111827;
 
-    opacity:.025;
+    opacity:.055;         /* .025 → .055 */
+
+    letter-spacing:-22px;
 
     user-select:none;
 
-    line-height:1;
+    line-height:.85;
+
+    font-family:"Arial Black",sans-serif;
 
 }
-
 /*==========================
 CONTENT
 ==========================*/
