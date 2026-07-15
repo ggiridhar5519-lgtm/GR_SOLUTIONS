@@ -2,47 +2,35 @@ pipeline {
 
     agent any
 
-    environment {
-        IMAGE_NAME = "ggiridhar5519/mywebsite"
-        TAG = "latest"
-    }
-
     stages {
 
         stage('Checkout Code') {
             steps {
-                echo 'Cloning Repository...'
+                echo 'Repository checked out successfully.'
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                bat 'docker build -t %IMAGE_NAME%:%TAG% .'
-            }
-        }
-
-        stage('Docker Images') {
-            steps {
-                bat 'docker images'
-            }
-        }
-
-        stage('Check Kubernetes Connection') {
-            steps {
-                bat 'kubectl get nodes'
-            }
-        }
-
-        stage('Deploy To Kubernetes') {
+        stage('List Workspace Files') {
             steps {
                 bat 'dir'
-                bat 'kubectl apply -f deployment.yaml --validate=false'
             }
         }
 
-        stage('Check Pods') {
+        stage('Verify Git') {
             steps {
-                bat 'kubectl get pods'
+                bat 'git --version'
+            }
+        }
+
+        stage('Verify Java') {
+            steps {
+                bat 'java -version'
+            }
+        }
+
+        stage('Build Complete') {
+            steps {
+                echo 'Website source code verified successfully.'
             }
         }
     }
@@ -50,11 +38,55 @@ pipeline {
     post {
 
         success {
-            echo 'CI/CD Pipeline Completed Successfully!'
+            echo 'Pipeline Completed Successfully!'
+
+            emailext(
+                subject: "✅ Jenkins Build SUCCESS - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: """
+Hello,
+
+Your Jenkins pipeline completed successfully.
+
+Job Name : ${env.JOB_NAME}
+Build No : ${env.BUILD_NUMBER}
+Status   : SUCCESS
+
+Build URL:
+${env.BUILD_URL}
+
+Regards,
+Jenkins CI/CD
+""",
+                to: "ggiridhar5519@gmail.com"
+            )
         }
 
         failure {
             echo 'Pipeline Failed!'
+
+            emailext(
+                subject: "❌ Jenkins Build FAILED - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: """
+Hello,
+
+Your Jenkins pipeline has failed.
+
+Job Name : ${env.JOB_NAME}
+Build No : ${env.BUILD_NUMBER}
+Status   : FAILED
+
+Check the build logs:
+${env.BUILD_URL}
+
+Regards,
+Jenkins CI/CD
+""",
+                to: "ggiridhar5519@gmail.com"
+            )
+        }
+
+        always {
+            echo 'Pipeline Execution Finished.'
         }
     }
 }
